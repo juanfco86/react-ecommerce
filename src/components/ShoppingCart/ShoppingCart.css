@@ -1,0 +1,30 @@
+.shopping_cart {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    border: 5px solid #add8e660;
+    background-color: #add8e699;
+}
+
+.title_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    color: #00000080;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    color: #00000080;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+

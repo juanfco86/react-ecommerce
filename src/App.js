@@ -1,8 +1,18 @@
 import './App.css';
+import PhotoContainer from './components/PhotoContainer/PhotoContainer';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import TopNav from './components/TopNav/TopNav';
 
 function App() {
   return (
-    <h1>Hola</h1>
+    <>
+      <TopNav />
+      <div className='container-body'>
+        <ShoppingCart />
+        <PhotoContainer />
+      </div>
+
+    </>
   );
 }
 
