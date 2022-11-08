@@ -1,17 +1,20 @@
 import './App.css';
-import PhotoContainer from './components/PhotoContainer/PhotoContainer';
-import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import TopNav from './components/TopNav/TopNav';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './routes/Router';
+import MainProvider from './context/MainProvider';
+
 
 function App() {
+  
   return (
     <>
-      <TopNav />
-      <div className='container-body'>
-        <ShoppingCart />
-        <PhotoContainer />
-      </div>
-
+      <MainProvider>
+        <BrowserRouter>
+          <TopNav />
+          <Router />
+        </BrowserRouter>
+      </MainProvider>
     </>
   );
 }

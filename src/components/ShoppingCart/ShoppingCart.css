@@ -28,3 +28,29 @@
     border-radius: 10px;
 }
 
+.priceCart {
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    color: #00000080;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.firstLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onlyPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

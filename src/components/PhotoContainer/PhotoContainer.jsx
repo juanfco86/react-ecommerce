@@ -3,22 +3,36 @@ import CardsInfo from "../../assets/db/db"
 import './PhotoContainer.css'
 
 
-const PhotoContainer = () => {
+
+const PhotoContainer = ({ saveValue, products, helper }) => {
+  
   return (
     <>
         <div className="photo-container">
             <div className="row photo-row">
-                {CardsInfo && CardsInfo.map((card) => {
-                  return (
-                    <PhotoCard 
-                      key={card.id}
-                      name={card.name}
-                      price={card.price}
-                      img={card.img}
-                      stock={card.stock}
-                    />
-                  );
-                })}
+                {
+                  products && products.map((card, index) => {
+
+                      return (
+
+                          <PhotoCard 
+                            key={index}
+                            id={card.id}
+                            name={card.name}
+                            price={card.price}
+                            img={card.img}
+                            stock={card.stock}
+                            saveValue={saveValue}
+                          />
+
+                      )
+                    
+
+                
+                      
+                  })
+                
+                }
             </div>
         </div>
     </>

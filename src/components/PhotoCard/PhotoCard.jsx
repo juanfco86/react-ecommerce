@@ -2,10 +2,16 @@ import * as photos from '../../assets/img'
 import CountApp from '../CountApp/CountApp';
 import './PhotoCard.css'
 
-const PhotoCard = ({ name, price, img, stock }) => {
-  
 
-    const imgProduct = photos[`photo${img}`];
+const PhotoCard = ( { id, name, price, stock, saveValue, img } ) => {
+  //const [count, setCount] = useState(1);
+  
+  const imgProduct = photos[`photo${img}`];
+  const product = {
+    id: id,
+    name: name,
+    price: price
+  };
 
   return (
     <>
@@ -19,10 +25,9 @@ const PhotoCard = ({ name, price, img, stock }) => {
                           <div className="prod_price"><span className="price"><b>Price:</b>  { price } €</span></div>
                           <div className="prod_stock"><span className="stock"><b>Stock:</b>  { stock }</span></div>
                         </div>
-                        <a href="#" className="nav add-cart"><button className="button-6">Buy<i className="fa-solid fa-cart-plus"></i></button></a>
+                        <button onClick={ () => { saveValue(product) } } className="button-6">Buy<i className="fa-solid fa-cart-plus"></i></button>
                     </div>
-                        <CountApp />
-            
+                        {/* <CountApp count={ count } setCount={ setCount } stock={ stock } /> */}
                 </div>
           </div>
     </>

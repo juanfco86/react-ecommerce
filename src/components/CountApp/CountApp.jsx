@@ -1,26 +1,25 @@
-
-import { useState } from 'react'
 import './CountApp.css'
 
 
-const CountApp = ({ value = 0 }) => {
-    const [count, setCount] = useState(value);
-    
+const CountApp = ({ count = 1, setCount, stock }) => {
+
     const increaseValue = () => {
-        setCount((prevState) => prevState + 1);
+        if(count < stock) {
+            setCount((prevState) => prevState + 1);
+        }
     }
     
     const decreaseValue = () => {
-        if (count > 0) {
+        if (count > 1) {
             setCount((prevState) => prevState - 1);
         }
     }
     
     const resetValue = () => {
-        setCount( value = 0 );
+        setCount(count = 1);
     }
 
-    
+
     return (
         <>
             <div className='btn-indere'>
