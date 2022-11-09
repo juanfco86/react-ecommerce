@@ -12,7 +12,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img } ) => {
     name: name,
     price: price,
     stock: stock,
-    img: img
+    img: img,
   };
 
   return (

@@ -17,7 +17,7 @@ const Router = () => {
         <Route path="/login" element={ <Login /> } />
         <Route path="*" element="Error 404: Page not found" />
     </Routes>
-    
+
   )
 }
 

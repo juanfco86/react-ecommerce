@@ -14,6 +14,7 @@ const Home = () => {
         const saveLocal = (buy) => {
             localStorage.setItem("Result", JSON.stringify(buy));
         }
+
         
         const saveValue = (product) => {
             let elem = JSON.parse(localStorage.getItem('Result'));

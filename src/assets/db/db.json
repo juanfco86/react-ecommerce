@@ -48,5 +48,18 @@
             "stock": 5,
             "amount": 0
         }
+    ],
+    
+    "users": [
+        {
+            "username": "Juan",
+            "email": "juan@gmail.com",
+            "password": "1234"
+        },
+        {
+            "username": "Pepe",
+            "email": "pepe@gmail.com",
+            "password": "1234"
+        }
     ]
 }

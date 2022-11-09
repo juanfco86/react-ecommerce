@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react';
 import { MainContext } from './MainContext'
 
 const MainProvider = ({ children }) => {
@@ -42,7 +41,6 @@ const MainProvider = ({ children }) => {
 
         const [products, setProducts] = useState(fetchData());
         
-        //console.log(products)
 
 
     return (
