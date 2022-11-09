@@ -1,5 +1,4 @@
 import PhotoCard from "../PhotoCard/PhotoCard"
-import CardsInfo from "../../assets/db/db"
 import './PhotoContainer.css'
 
 

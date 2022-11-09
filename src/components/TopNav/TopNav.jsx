@@ -15,10 +15,9 @@ const TopNav = () => {
                         </div>
                         <li><Link to="/" className="nav"><button className="button-6" role="button">Home</button></Link></li>
                         <li><Link to="/category" className="nav"><button className="button-6" role="button">Category</button></Link></li>
-                        <li><a href="#" className="nav"><button className="button-6" role="button">Specials</button></a></li>
                         <li><Link to="/products" className="nav"><button className="button-6" role="button">Shipping<i className="fa-solid fa-cart-shopping"></i></button></Link></li>
-                        <li><a href="#" className="nav"><button className="button-6" role="button">Account</button></a></li>
-                        <li><a href="#" className="nav"><button className="button-6" role="button">Sign Up</button></a></li>
+                        <li><Link to="/account" className="nav"><button className="button-6" role="button">Account</button></Link></li>
+                        <li><Link to="/login" className="nav"><button className="button-6" role="button">Sign Up</button></Link></li>
                     </ul>
                 </div>
             </div>

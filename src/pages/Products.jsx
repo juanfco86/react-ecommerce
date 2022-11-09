@@ -1,9 +1,13 @@
 import React, { useContext } from 'react'
 import { MainContext } from '../context/MainContext'
+import * as photos from '../assets/img'
 
 const Products = () => {
 
-    const { buy } = useContext(MainContext)
+    const { buy } = useContext(MainContext);
+
+    const imgProduct = photos[`photo${buy.map((e) => e.img)}`];
+    console.log(imgProduct)
 
     return (
         <>
@@ -11,9 +15,10 @@ const Products = () => {
                 buy && buy.map((card) => {
                     return (
                         <>
+                        
                             <p>{card.name}</p>
                             <p>{card.price}</p>
-                            <img src={card.img} alt={card.name} />
+                            <img src={imgProduct} alt={card.name} />
                         </>
                     )
                 }) 

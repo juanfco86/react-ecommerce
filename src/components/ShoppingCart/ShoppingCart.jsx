@@ -1,9 +1,10 @@
 import './ShoppingCart.css'
 import Cart from '../Cart/Cart'
+import TotalPrice from '../TotalPrice/TotalPrice'
 
 //CART CONTAINER
 
-const ShoppingCart = ( { buy } ) => {
+const ShoppingCart = ( { buy, count, setCount, result, setResult } ) => {
 
     return (
         <>
@@ -17,17 +18,19 @@ const ShoppingCart = ( { buy } ) => {
                             id={card.id}
                             name={card.name}
                             price={card.price}
+                            img={card.img}
+                            stock={card.stock}
                             buy={buy}
+                            count={count}
+                            setCount={setCount}
                         />
                     )
                 })}
                 <hr />
-                    <p className="totalPrice"><b>TOTAL</b> <span className='onlyPrice'>
-                        { buy && buy
-                            .map((elem) => elem.price)
-                            .reduce((prev, curr) => prev + curr, 0)
-                        } €
-                    </span></p>
+                    <TotalPrice 
+                        buy={buy}
+                        count={count} 
+                    />
             </aside>
         </>
     )

@@ -1,7 +1,7 @@
 import './CountApp.css'
 
 
-const CountApp = ({ count = 1, setCount, stock }) => {
+const CountApp = ({ count, setCount, stock }) => {
 
     const increaseValue = () => {
         if(count < stock) {
@@ -24,13 +24,13 @@ const CountApp = ({ count = 1, setCount, stock }) => {
         <>
             <div className='btn-indere'>
                 <div>
-                    <b>Amount:</b> { count }
+                    <b>Quantity:</b> { count }
                 </div>
 
-                <div>
-                    <button onClick={ increaseValue } className="button-6 btn-buy">+</button>
-                    <button onClick={ decreaseValue } className="button-6 btn-buy">-</button>
-                    <button onClick={ resetValue } className="button-6 btn-buy">R</button>
+                <div className='btn-options'>
+                    <button onClick={ increaseValue } className="btn-buy btn-size">+</button>
+                    <button onClick={ decreaseValue } className="btn-buy btn-size">-</button>
+                    <button onClick={ resetValue } className="btn-buy btn-size">R</button>
                 </div>
             </div>
         </>

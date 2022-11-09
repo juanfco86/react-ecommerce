@@ -5,7 +5,7 @@ import { MainContext } from '../context/MainContext'
 
 const Home = () => {
 
-    const { buy, setBuy, products, setProducts, helper } = useContext(MainContext);
+    const { buy, setBuy, count, setCount, products, setProducts, helper, result, setResult } = useContext(MainContext);
 
         useEffect(() => {
             saveLocal(buy);
@@ -25,7 +25,7 @@ const Home = () => {
 
     return (
         <div className='container-body'>
-            <ShoppingCart buy={ buy } />
+            <ShoppingCart buy={ buy } count={count} setCount={setCount} result={result} setResult={setResult} />
             <PhotoContainer saveValue= { saveValue } products = { products } helper = { helper }  />
         </div>
     )

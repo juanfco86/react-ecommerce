@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { MainContext } from './MainContext'
 
-const MainProvider = ({children}) => {
+const MainProvider = ({ children }) => {
 
     
     let saveCartBuy = [];

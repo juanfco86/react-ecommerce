@@ -1,6 +1,16 @@
 .btn-indere {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
+    gap: 5px;
 }
+
+.btn-size {
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-radius: 50px;
+    font-size: smaller;
+    width: 40px;
+    margin: 1px;
+}
+

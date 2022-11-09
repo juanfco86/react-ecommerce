@@ -1,5 +1,5 @@
 import * as photos from '../../assets/img'
-import CountApp from '../CountApp/CountApp';
+
 import './PhotoCard.css'
 
 
@@ -10,7 +10,9 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img } ) => {
   const product = {
     id: id,
     name: name,
-    price: price
+    price: price,
+    stock: stock,
+    img: img
   };
 
   return (
@@ -18,7 +20,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img } ) => {
           <div className="prod_box">
                 <div className="center_prod_box">
                     <div className="product_title"><a className='withoutStyle' href="#">{ name }</a></div>
-                    <div className="product_img"><a className='withoutStyle' href="#"><img className='photo' src={ imgProduct } alt={ name } border="0" /></a></div>
+                    <div className="product_img"><a className='withoutStyle' href="#"><img className='photo withoutStyle' src={ imgProduct } alt={ name } border="0" /></a></div>
                     
                     <div className='prod_container'>
                         <div className='prod_container_secondary'>

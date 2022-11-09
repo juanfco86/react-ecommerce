@@ -1,0 +1,10 @@
+.totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    color: #00000080;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
