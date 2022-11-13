@@ -3,7 +3,6 @@ import { MainContext } from './MainContext'
 
 const MainProvider = ({ children }) => {
 
-    
     let saveCartBuy = [];
     
     if (localStorage.getItem('Result')) {
@@ -13,10 +12,9 @@ const MainProvider = ({ children }) => {
     const [helper, setHelper] = useState(false);
     const [buy, setBuy] = useState(saveCartBuy);
     const [count, setCount] = useState(1);
-    
+
     
     const url = "http://localhost:3000/data";
-
     
     
         const fetchData = () => {
@@ -37,11 +35,9 @@ const MainProvider = ({ children }) => {
                     }
             
         }
-
-
+        
         const [products, setProducts] = useState(fetchData());
         
-
 
     return (
         <MainContext.Provider value={{ buy, setBuy, count, setCount, products, setProducts }}>

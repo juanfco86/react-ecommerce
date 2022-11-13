@@ -16,3 +16,49 @@
     align-items: center;
     gap: 10px;
 }
+
+.product-cart-buy {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    border: 3px solid black;    
+    height: 305px;
+    align-items: center;
+    margin: 50px;
+    padding: auto;
+}
+
+.photo-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-price-cart {
+    object-fit: cover;
+    height: 150px;
+    padding: 10px;
+}
+
+table{
+    table-layout: fixed;
+    width: 80%;
+    margin: auto;
+    
+}
+
+.th-titles {
+    text-align: center;
+}
+
+th, td {
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    word-wrap: break-word;
+    
+}
+
+.td-obj {
+    
+}

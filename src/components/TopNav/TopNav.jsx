@@ -19,19 +19,22 @@ const TopNav = () => {
                             <a href="#"><img src={ photo } alt="Logo image" border="0" width="130" height="110" /></a>
                         </div>
                         <li>
-                            <Link to="/" className="nav"><button className="button-6" role="button">Home</button></Link>
+                            <Link to="/" className="nav"><button className="button-6" role="button">Home <i className="fa-solid fa-home"></i></button></Link>
                         </li>
                         <li>
                             <Link to="/category" className="nav"><button className="button-6" role="button">Category</button></Link>
                         </li>
                         <li>
-                            <Link to="/products" className="nav"><button className="button-6" role="button">Cart<i className="fa-solid fa-cart-shopping"></i></button></Link>
+                            <Link to="/products" className="nav"><button className="button-6" role="button">Cart <i className="fa-solid fa-cart-shopping"></i></button></Link>
                         </li>
                         <li>
-                            <Link to="/account" className="nav"><button className="button-6" role="button">Account</button></Link>
+                            <Link to="/wish" className="nav"><button className="button-6" role="button">Wish List <i className='fa-solid fa-heart icon-heart'></i></button></Link>
                         </li>
                         <li>
-                            <Link to="/login" className="nav"><button className="button-6" role="button">Sign Up</button></Link>
+                            <Link to="/login" className="nav"><button className="button-6" role="button">Login <i className="fa-solid fa-user"></i></button></Link>
+                        </li>
+                        <li>
+                            <Link to="/prueba" className="nav"><button className="button-6" role="button">Prueba</button></Link>
                         </li>
                         <li>
                             <form>

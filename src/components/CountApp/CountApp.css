@@ -14,3 +14,19 @@
     margin: 1px;
 }
 
+.count-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-trash {
+    font-size: larger;
+}
+
+.btn-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+

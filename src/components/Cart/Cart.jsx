@@ -4,18 +4,16 @@ import './Cart.css'
 
 const Cart = ( props ) => {
     
-    const { id, name, price, img, count } = props;
+    const { name, price, img, count, setCount, stock, buy, setBuy, id } = props;
     const imgProduct = photos[`photo${img}`];
 
-
-
-
+    
 
         return (
             <>
-                <div className="cart_contain" id={ id }> 
+                <div className="cart_contain">
                     <div className="priceCart">
-                        <CountApp count={ props.count } setCount={ props.setCount } stock={ props.stock } />
+                        <CountApp id={ id } buy={ buy } setBuy={ setBuy } count={ count } setCount={ setCount } stock={ stock } />
                         <span className='secondLine'><b>{ name }</b></span>
                         <img src={ imgProduct } className='imgProduct' />
                         <span className='onlyPrice'><b>Price:</b> { price * count } €</span>

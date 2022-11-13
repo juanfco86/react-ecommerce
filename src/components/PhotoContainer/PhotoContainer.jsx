@@ -3,17 +3,16 @@ import './PhotoContainer.css'
 
 
 
-const PhotoContainer = ({ saveValue, products, helper }) => {
+const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
   
   return (
     <>
         <div className="photo-container">
             <div className="row photo-row">
+              
                 {
                   products && products.map((card, index) => {
-
                       return (
-
                           <PhotoCard 
                             key={index}
                             id={card.id}
@@ -22,16 +21,13 @@ const PhotoContainer = ({ saveValue, products, helper }) => {
                             img={card.img}
                             stock={card.stock}
                             saveValue={saveValue}
+                            addWish={addWish}
+                            deleteWish={deleteWish}
                           />
-
                       )
-                    
-
-                
-                      
                   })
-                
                 }
+
             </div>
         </div>
     </>
