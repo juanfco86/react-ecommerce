@@ -39,29 +39,31 @@ const Home = () => {
     }, [wishes])
 
 
-    const { buy, setBuy, count, setCount, products, helper, result, setResult } = useContext(MainContext);
+    const { buy, setBuy, products, helper, result, setResult } = useContext(MainContext);
 
         useEffect(() => {
             saveLocal(buy);
         }, [buy])
+
+
         
         const saveLocal = (buy) => {
             localStorage.setItem("Result", JSON.stringify(buy));
         }
 
-        
         const saveValue = (product) => {
             let elem = JSON.parse(localStorage.getItem('Result'));
-            console.log(product.amount);
+            
             elem.push(product);
             setBuy(elem);
+
             toast.success('Added to the cart successfully! 💖')
         }
         
 
     return (
         <div className='container-body'>
-            <ShoppingCart buy={ buy } setBuy={ setBuy } count={count} setCount={setCount} result={result} setResult={setResult} />
+            <ShoppingCart buy={ buy } setBuy={ setBuy } result={result} setResult={setResult} />
             <PhotoContainer addWish= { addWish } deleteWish= { deleteWish } saveValue= { saveValue } products = { products } helper = { helper } />
         </div>
     )

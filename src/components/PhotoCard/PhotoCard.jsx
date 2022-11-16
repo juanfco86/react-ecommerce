@@ -28,11 +28,9 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, d
     })
   }, [])
   
-
   const findId = `icon-heart${id}`;
   
   const heart = (product) => {
-
       const icon = document.getElementById(findId);
       icon.classList.toggle('fa-solid');
       

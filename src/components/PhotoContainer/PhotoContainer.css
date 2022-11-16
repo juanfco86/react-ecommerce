@@ -50,13 +50,22 @@ table{
 
 .th-titles {
     text-align: center;
-    background-color: lightblue;
+    background-color: #add8e670;
 }
 
 th, td {
     text-align: center;
     word-wrap: break-word;
     
+}
+
+.td-styles {
+    border-bottom: 5px solid #add8e690;
+}
+
+.th-footer {
+    text-align: center;
+    background-color: #add8e670;
 }
 
 .searchbar {

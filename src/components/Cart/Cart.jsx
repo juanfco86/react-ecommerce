@@ -13,7 +13,7 @@ const Cart = ( props ) => {
             <>
                 <div className="cart_contain">
                     <div className="priceCart">
-                        <CountApp id={ id } buy={ buy } setBuy={ setBuy } stock={ stock } amount={amount} />
+                        <CountApp id={ id } buy={ buy } setBuy={ setBuy } stock={ stock } amount={ amount } />
                         <span className='secondLine'><b>{ name }</b></span>
                         <img src={ imgProduct } className='imgProduct' />
                         <span className='onlyPrice'><b>Price:</b> { price } €</span>

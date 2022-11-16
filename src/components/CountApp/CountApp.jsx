@@ -8,14 +8,15 @@ import './CountApp.css'
 const CountApp = ({ amount, stock, buy, setBuy, id }) => {
 
     const [count, setCount] = useState(1);
-    
+
     // CREAR UN OBJETO PROVISIONAL PARA NO PERDER LA INFORMACION DEL ORIGINAL
     const [prov, setProv] = useState(buy);
-    
+
     // QUE LO MUESTRE CADA VEZ QUE prov RECIBE CAMBIOS
     useEffect(() => {
         setBuy(prov);
     }, [prov])
+
 
     // BOTON DE BORRAR
     const deleteProduct = (id) => {

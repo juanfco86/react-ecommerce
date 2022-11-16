@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { MainContext } from '../context/MainContext'
 import * as photos from '../assets/img'
+import TotalPrice from '../components/TotalPrice/TotalPrice';
 
 const Products = () => {
     const { buy } = useContext(MainContext);
@@ -22,10 +23,10 @@ const Products = () => {
                         <tr>
 
                             <th></th>
-                            <th className='th-titles'>Product</th>
-                            <th className='th-titles'>Price</th>
-                            <th className='th-titles'>Quantity</th>
-                            <th className='th-titles'>Total</th>
+                            <th className='th-titles td-styles'>Product</th>
+                            <th className='th-titles td-styles'>Price</th>
+                            <th className='th-titles td-styles'>Quantity</th>
+                            <th className='th-titles td-styles'>Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,10 +38,10 @@ const Products = () => {
                                 <>
                                         <tr key={productId}>
                                             <td className='td-obj'><img src={photos[`photo${card.img}`]} alt={card.name} className='photo-price-cart' /></td>
-                                            <td className='td-obj'>{card.name}</td>
-                                            <td className='td-obj'>{card.price} €</td>
-                                            <td className='td-obj'>Count</td>
-                                            <td className='td-obj'>{card.price * 2} €</td>
+                                            <td className='td-obj td-styles'>{card.name}</td>
+                                            <td className='td-obj td-styles'>{card.price} €</td>
+                                            <td className='td-obj td-styles'>{card.amount}</td>
+                                            <td className='td-obj td-styles'>{card.price * card.amount} €</td>
                                         </tr>
                                 </>
                             )
@@ -51,12 +52,13 @@ const Products = () => {
             <tfoot>
                 <tr>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
+                    <td className='th-footer'></td>
+                    <td className='th-footer' colSpan="2">
+                        <TotalPrice buy={ buy } />
+                    </td>
+                    <td className='th-footer'>
                         <div className='d-flex flex-row justify-content-center align-items-end'>
-                            <button className='mb-1 mt-1 button-6'>Buy</button>
+                            <button className='mb-1 mt-1 button-6'>Pay</button>
                         </div>
                     </td>
                 </tr>
