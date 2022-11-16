@@ -4,8 +4,7 @@ import TotalPrice from '../TotalPrice/TotalPrice'
 import { Link } from 'react-router-dom'
 
 //CART CONTAINER
-
-const ShoppingCart = ( { buy, setBuy } ) => {
+const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) => {
 
     return (
         <>
@@ -25,6 +24,9 @@ const ShoppingCart = ( { buy, setBuy } ) => {
                                 amount={card.amount}
                                 buy={buy}
                                 setBuy={setBuy}
+                                saveValue={saveValue}
+                                decreaseValue={decreaseValue}
+                                resetValue={resetValue}
                             />
                         ) 
                     }) || <h6 className='empty-cart'>Empty Cart</h6>

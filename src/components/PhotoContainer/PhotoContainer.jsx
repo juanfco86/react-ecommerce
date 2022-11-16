@@ -16,7 +16,7 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
         <>  
             <div>
                 <div className="searchbar-div mb-3">
-                    <input className="searchbar" type="text" name="filter" value={query} placeholder="Search product" onChange={ handleInput } />
+                    <input className="searchbar" type="text" name="filter" value={ query } autoComplete="off" placeholder="Search product" onChange={ handleInput } />
                 </div>
 
                 <div className="photo-container">

@@ -16,12 +16,16 @@
 
 .count-space {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .icon-trash {
     font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
 }
 
 .btn-options {
@@ -30,3 +34,19 @@
     align-items: center;
 }
 
+.cart-amount-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+}
+
+.btn-delete {
+    background-color: white;
+
+}
+
+.start-cart-line {
+    background-color: lightblue;
+}

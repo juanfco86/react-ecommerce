@@ -2,7 +2,7 @@
 .priceCart {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.4fr 1fr 0.1fr;
+    grid-template-rows: 0fr 0fr 0.4fr 1fr 0fr 0fr;
     padding: 12px;
 }
 
