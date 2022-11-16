@@ -44,21 +44,33 @@ table{
     table-layout: fixed;
     width: 80%;
     margin: auto;
+    margin-top: 25px;
     
 }
 
 .th-titles {
     text-align: center;
+    background-color: lightblue;
 }
 
 th, td {
     text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     word-wrap: break-word;
     
 }
 
-.td-obj {
-    
+.searchbar {
+    width: 60%;
+    padding: 5px;
+}
+
+.searchbar-div {
+    background-color: #add8e670;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 60px;
+    box-shadow: 5px 5px #00000010;
 }

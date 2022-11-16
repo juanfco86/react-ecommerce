@@ -6,10 +6,6 @@ import './TopNav.css'
 
 const TopNav = () => {
 
-    const [search, setSearch] = useState('');
-
-    if(search === 'reset') setSearch('Culo');
-
     return (
         <>
             <div id="main_content">
@@ -36,15 +32,6 @@ const TopNav = () => {
                         <li>
                             <Link to="/prueba" className="nav"><button className="button-6" role="button">Prueba</button></Link>
                         </li>
-                        <li>
-                            <form>
-                                <input type="text" name="search" value={search} onChange={e => setSearch(e.target.value)} />
-                                <button type="submit">Search</button>
-                            </form>
-                        </li> 
-                        {/* // PRUEBA QUE ENVIA LA INFO INTRODUCIDA EN EL SEARCH 
-                            // METERLO EN UN FILTER PARA PRODUCTOS?? */}
-                        {search}
                     </ul>
                 </div>
             </div>

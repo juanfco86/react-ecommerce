@@ -6,7 +6,7 @@
             "price": 210,
             "img": "01",
             "stock": 10,
-            "amount": 0,
+            "amount": 1,
             "category": "rod"    
         },
         {
@@ -15,7 +15,7 @@
             "price": 199,
             "img": "02",
             "stock": 5,
-            "amount": 0,
+            "amount": 1,
             "category": "rod"
         },
         {
@@ -24,7 +24,7 @@
             "price": 30,
             "img": "03",
             "stock": 1,
-            "amount": 0,
+            "amount": 1,
             "category": "rod"
         },
         {
@@ -33,7 +33,7 @@
             "price": 89,
             "img": "04",
             "stock": 7,
-            "amount": 0,
+            "amount": 1,
             "category": "reel"
         },
         {
@@ -42,7 +42,7 @@
             "price": 145,
             "img": "05",
             "stock": 1,
-            "amount": 0,
+            "amount": 1,
             "category": "reel"
         },
         {
@@ -51,7 +51,7 @@
             "price": 169.60,
             "img": "06",
             "stock": 5,
-            "amount": 0,
+            "amount": 1,
             "category": "reel"    
         }
     ],

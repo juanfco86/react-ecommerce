@@ -4,7 +4,7 @@ import './Cart.css'
 
 const Cart = ( props ) => {
     
-    const { name, price, img, count, setCount, stock, buy, setBuy, id } = props;
+    const { name, price, img, stock, amount, buy, setBuy, id } = props;
     const imgProduct = photos[`photo${img}`];
 
     
@@ -13,10 +13,10 @@ const Cart = ( props ) => {
             <>
                 <div className="cart_contain">
                     <div className="priceCart">
-                        <CountApp id={ id } buy={ buy } setBuy={ setBuy } count={ count } setCount={ setCount } stock={ stock } />
+                        <CountApp id={ id } buy={ buy } setBuy={ setBuy } stock={ stock } amount={amount} />
                         <span className='secondLine'><b>{ name }</b></span>
                         <img src={ imgProduct } className='imgProduct' />
-                        <span className='onlyPrice'><b>Price:</b> { price * count } €</span>
+                        <span className='onlyPrice'><b>Price:</b> { price } €</span>
                     </div>
                 </div>
             </>

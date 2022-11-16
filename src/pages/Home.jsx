@@ -52,6 +52,7 @@ const Home = () => {
         
         const saveValue = (product) => {
             let elem = JSON.parse(localStorage.getItem('Result'));
+            console.log(product.amount);
             elem.push(product);
             setBuy(elem);
             toast.success('Added to the cart successfully! 💖')

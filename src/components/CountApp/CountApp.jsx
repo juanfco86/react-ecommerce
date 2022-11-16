@@ -1,40 +1,49 @@
 import { editableInputTypes } from '@testing-library/user-event/dist/utils';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import Products from '../../pages/Products';
 import './CountApp.css'
 
 
-const CountApp = ({ count, setCount, stock, buy, setBuy, id, saveCartBuy }) => {
+const CountApp = ({ amount, stock, buy, setBuy, id }) => {
 
+    const [count, setCount] = useState(1);
+    
+    // CREAR UN OBJETO PROVISIONAL PARA NO PERDER LA INFORMACION DEL ORIGINAL
+    const [prov, setProv] = useState(buy);
+    
+    // QUE LO MUESTRE CADA VEZ QUE prov RECIBE CAMBIOS
+    useEffect(() => {
+        setBuy(prov);
+    }, [prov])
+
+    // BOTON DE BORRAR
+    const deleteProduct = (id) => {
+        toast.error('Remove to the cart successfully 💔')
+        return setProv(buy.filter((e, index) => {
+            return buy[index].id !== id;
+        }))
+    }
+    
+    // BOTON DE INCREMENTAR VALOR
     const increaseValue = () => {
         if(count < stock) {
             setCount((prevState) => prevState + 1);
         }
     }
-    
+
+    // BOTON DE REDUCIR VALOR
     const decreaseValue = () => {
         if (count > 1) {
             setCount((prevState) => prevState - 1);
         }
     }
     
+    // BOTON DE RESETEAR VALOR
     const resetValue = () => {
-        setCount(count = 1);
+        setCount((prevState) => prevState = 1);
     }
 
-    // CREAR UN OBJETO PROVISIONAL PARA NO PERDER LA INFORMACION DEL ORIGINAL
-    const [prov, setProv] = useState(buy);
-    
-    const deleteProduct = (id) => {
-        return setProv(buy.filter((e, index) => {
-            toast.error('Remove to the cart successfully 💔')
-            return buy[index].id !== id;
-        }))
-    }
-
-    setBuy(prov);
-    
     
     return (
         <>

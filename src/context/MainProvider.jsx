@@ -11,7 +11,7 @@ const MainProvider = ({ children }) => {
     
     const [helper, setHelper] = useState(false);
     const [buy, setBuy] = useState(saveCartBuy);
-    const [count, setCount] = useState(1);
+    
 
     
     const url = "http://localhost:3000/data";
@@ -40,7 +40,7 @@ const MainProvider = ({ children }) => {
         
 
     return (
-        <MainContext.Provider value={{ buy, setBuy, count, setCount, products, setProducts }}>
+        <MainContext.Provider value={{ buy, setBuy, products, setProducts }}>
             { children }
         </MainContext.Provider>
     )

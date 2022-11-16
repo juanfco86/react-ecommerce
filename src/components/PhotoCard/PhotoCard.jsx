@@ -4,7 +4,7 @@ import * as photos from '../../assets/img'
 import './PhotoCard.css'
 
 
-const PhotoCard = ( { id, name, price, stock, saveValue, img, addWish, deleteWish } ) => {
+const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, deleteWish } ) => {
   
   const product = {
     id: id,
@@ -12,6 +12,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, addWish, deleteWis
     price: price,
     stock: stock,
     img: img,
+    amount: amount,
   };
   
   const imgProduct = photos[`photo${img}`];
@@ -39,8 +40,8 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, addWish, deleteWis
           toast.success('Added to the wishlist successfully! 😊')
           addWish(product);
       } else {
-          toast.error('Remove to the wishlist successfully! 😒')
           deleteWish(product);
+          toast.error('Remove to the wishlist successfully! 😒')
       }
 
   };  

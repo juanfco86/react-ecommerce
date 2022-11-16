@@ -7,7 +7,16 @@ const Products = () => {
 
     return (
         <>
+
+        {/* EJEMPLO DE COMO PODRIA HACERLO
+            <div>
+                <Login />
+            </div>
+        FIN EJEMPLO */}
+
             {
+                <div>
+
                 <table>
                     <thead>
                         <tr>
@@ -21,21 +30,22 @@ const Products = () => {
                     </thead>
                     <tbody>
 
-                    { buy?.map((card) => {
-                        const productId = `product${card.id}`;
-                        return (
-                            
-                            <>
-                                    <tr key={productId}>
-                                        <td className='td-obj'><img src={photos[`photo${card.img}`]} alt={card.name} className='photo-price-cart' /></td>
-                                        <td className='td-obj'>{card.name}</td>
-                                        <td className='td-obj'>{card.price} €</td>
-                                        <td className='td-obj'>Count</td>
-                                        <td className='td-obj'>{card.price * 2} €</td>
-                                    </tr>
-                            </>
-                        )
-                    })}
+                    { 
+                        buy?.map((card) => {
+                            const productId = `product${card.id}`;
+                            return (
+                                <>
+                                        <tr key={productId}>
+                                            <td className='td-obj'><img src={photos[`photo${card.img}`]} alt={card.name} className='photo-price-cart' /></td>
+                                            <td className='td-obj'>{card.name}</td>
+                                            <td className='td-obj'>{card.price} €</td>
+                                            <td className='td-obj'>Count</td>
+                                            <td className='td-obj'>{card.price * 2} €</td>
+                                        </tr>
+                                </>
+                            )
+                        })
+                    }
 
                     </tbody>
             <tfoot>
@@ -46,13 +56,16 @@ const Products = () => {
                     <td></td>
                     <td>
                         <div className='d-flex flex-row justify-content-center align-items-end'>
-                            <button className='mb-1 mt-1 btn button-6'>Buy</button>
+                            <button className='mb-1 mt-1 button-6'>Buy</button>
                         </div>
                     </td>
                 </tr>
             </tfoot>
             
             </table>
+                    </div>
+
+            
 
             }
         </>

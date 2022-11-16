@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 //CART CONTAINER
 
-const ShoppingCart = ( { buy, setBuy, count, setCount } ) => {
+const ShoppingCart = ( { buy, setBuy } ) => {
 
     return (
         <>
@@ -21,20 +21,17 @@ const ShoppingCart = ( { buy, setBuy, count, setCount } ) => {
                             price={card.price}
                             img={card.img}
                             stock={card.stock}
+                            amount={card.amount}
                             buy={buy}
                             setBuy={setBuy}
-                            count={count}
-                            setCount={setCount}
-                            
                         />
                     ) 
-                }) || "Empty Cart" }  
+                }) || <h6 className='empty-cart'>Empty Cart</h6> }  
 
                 <hr />
                 <div className='mb-3'>
                     <TotalPrice 
                         buy={buy}
-                        count={count} 
                     />
                 </div>
 
