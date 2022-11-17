@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import PhotoCard from "../PhotoCard/PhotoCard"
 import './PhotoContainer.css'
+import { v4 as uuidv4 } from 'uuid';
 
 const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
 
@@ -21,7 +22,6 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
 
                 <div className="photo-container">
                     <div className="row photo-row">
-                      
                         {
                           products && products.filter((card) => {
                             if (!query) return true;
@@ -30,10 +30,10 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
                               return productName.includes(query.toLowerCase());
                             }
                           })
-                          .map((card, index) => {
+                          .map((card) => {
                             return (
                               <PhotoCard 
-                              key={index}
+                              key={uuidv4()}
                               id={card.id}
                               name={card.name}
                               price={card.price}

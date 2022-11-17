@@ -84,3 +84,17 @@ th, td {
     box-shadow: 5px 5px #00000010;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
+.form-group {
+    width: 87%;
+}
+
+.div-double {
+    border-left: 4px solid #00000030;
+}
+
+.form-login {
+    margin-top: 15px;
+}
+
+

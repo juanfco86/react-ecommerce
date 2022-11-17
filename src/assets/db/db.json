@@ -6,7 +6,7 @@
             "price": 210,
             "img": "01",
             "stock": 10,
-            "category": "rod"    
+            "category": "rod"
         },
         {
             "id": 2,
@@ -43,23 +43,38 @@
         {
             "id": 6,
             "name": "Carrete SHIMANO SOARE BB A C2000SS PG",
-            "price": 169.60,
+            "price": 169.6,
             "img": "06",
             "stock": 5,
-            "category": "reel"    
+            "category": "reel"
         }
     ],
-    
     "users": [
         {
-            "username": "Juan",
-            "email": "juan@gmail.com",
-            "password": "1234"
+            "id": "8297fcfd-2234-43f7-91b9-9da8eec1098b",
+            "email": "hola@gmail.com",
+            "password": "12345",
+            "firstName": "hola",
+            "lastName": "ola",
+            "address": "calle de la ola",
+            "postalCode": "11111",
+            "cardNumber": "1123 1221 1111 2222",
+            "cardOwner": "holi",
+            "expDate": "2023-02-26",
+            "CVC": "111"
         },
         {
-            "username": "Pepe",
-            "email": "pepe@gmail.com",
-            "password": "1234"
+            "id": "b9b7e7b5-d949-45c6-8939-8ec33b533e09",
+            "email": "juan@gmail.com",
+            "password": "1234",
+            "firstName": "Juan",
+            "lastName": "Solano",
+            "address": "C/ Heroes sin capa, n26",
+            "postalCode": "29640",
+            "cardNumber": "1111 2222 3333 4444",
+            "cardOwner": "Juan Solano",
+            "expDate": "2026-12-19",
+            "CVC": "222"
         }
     ]
 }

@@ -1,5 +1,5 @@
 
-import React, { memo, useState } from 'react'
+import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 import photo from '../../assets/img/logo.png'
 import './TopNav.css'
@@ -28,9 +28,6 @@ const TopNav = () => {
                         </li>
                         <li>
                             <Link to="/login" className="nav"><button className="button-6" role="button">Login <i className="fa-solid fa-user"></i></button></Link>
-                        </li>
-                        <li>
-                            <Link to="/prueba" className="nav"><button className="button-6" role="button">Prueba</button></Link>
                         </li>
                     </ul>
                 </div>

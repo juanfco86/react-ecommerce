@@ -2,6 +2,7 @@ import './ShoppingCart.css'
 import Cart from '../Cart/Cart'
 import TotalPrice from '../TotalPrice/TotalPrice'
 import { Link } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 
 //CART CONTAINER
 const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) => {
@@ -15,7 +16,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                     buy && buy.length > 0 && buy.map((card, index) => {
                         return (
                             <Cart
-                                key={index}
+                                key={uuidv4()}
                                 id={card.id}
                                 name={card.name}
                                 price={card.price}

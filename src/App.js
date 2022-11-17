@@ -10,10 +10,12 @@ function App() {
   return (
     <>
       <MainProvider>
-        <BrowserRouter>
-          <TopNav />
-          <Router />
-        </BrowserRouter>
+        {/* apiprovider */}
+          <BrowserRouter>
+            <TopNav />
+            <Router />
+          </BrowserRouter>
+        {/* /apiprovider */}
       </MainProvider>
     </>
   );

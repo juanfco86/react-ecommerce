@@ -13,9 +13,7 @@ const init = () => {
 const Home = () => {
     
     const initialState = [];
-    
     const [ wishes, dispatch ] = useReducer(WishReducer, initialState, init);
-    
     
     const addWish = (product) => {
         const action = {
