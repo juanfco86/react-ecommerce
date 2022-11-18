@@ -17,19 +17,24 @@ const Login = () => {
         fetchDataUsers();
     }, [])
     
-    const errorMessage = validate(email, password);
     
     const login = (email, password) => {
-        const findUser = usersData.find((elem) => elem.email === email) && usersData.find((elem) => elem.password === password)
-
+        // Busca los usuarios que coincidan con ese email y password
+        const findUser = usersData.find((elem) => elem.password === password) && usersData.find((elem) => elem.email === email)
         if (findUser) {
             sessionStorage.setItem('Logged', JSON.stringify(findUser));
             navigate('/products');
         } else {
-            return 'incorret';
+            return setErrorMessage('Email or password incorrect');
         }
     }
-    
+    const [errorMessage, setErrorMessage] = useState('');
+    // Si el mensaje de error esta vacio, devuelve validate con los errores que tenga el usuario
+    const errorAux = () => {
+        if(errorMessage === '') {
+            return validate(email, password);
+        }
+    } 
     
     return (
         <>
@@ -49,9 +54,8 @@ const Login = () => {
                         <label className="form-label">Password</label>
                         <input type="password" className="form-control col-12" name="password" value={password} onChange={e => setPassword(e.target.value)} />
                     </div>
-                    <button type="submit" className="mb-4 btn btn-primary" disabled={errorMessage}>Submit</button>
-                    <p className='text-danger'>{errorMessage}</p>
-                    
+                    <button type="submit" className="mb-4 btn btn-primary">Submit</button>
+                    <p className='text-danger'>{errorAux()} {errorMessage}</p>
                     <p>Don't have a account? <Link to="/register">Create here!</Link></p>
                 </div>
             </form>
@@ -59,11 +63,13 @@ const Login = () => {
     )
 }
 
-
 const validate = (email, password) => {
-    if (!email.includes('@')) return 'Write a valid email';
-    if (password.length < 3) return 'Enter your password'
+    if (!email.includes('@')) {
+        return 'Write a valid email';
+    } else if (password.length < 4) {
+        return 'Enter your password';
+    } 
+    //else return "Email or password incorrect, try again!";
 }
-
 
 export default Login
