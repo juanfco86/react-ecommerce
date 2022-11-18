@@ -12,6 +12,7 @@ const MainProvider = ({ children }) => {
     
     const [usersData, setUsersData] = useState([]);
     const [helper, setHelper] = useState(false);
+    const [helperRegister, setHelperRegister] = useState(false);
     const [buy, setBuy] = useState(saveCartBuy);
     
     const url = "http://localhost:3000/data";
@@ -49,7 +50,7 @@ const MainProvider = ({ children }) => {
     const [products, setProducts] = useState(fetchData());
     
     return (
-        <MainContext.Provider value={{ buy, setBuy, products, setProducts, usersData, setUsersData, fetchDataUsers }}>
+        <MainContext.Provider value={{ buy, setBuy, products, setProducts, usersData, setUsersData, fetchDataUsers, helperRegister, setHelperRegister }}>
             { children }
         </MainContext.Provider>
     )

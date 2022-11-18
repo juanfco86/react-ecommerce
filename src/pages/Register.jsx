@@ -1,36 +1,35 @@
-import { useEffect } from 'react';
 import { useContext } from 'react'
 import { MainContext } from '../context/MainContext'
 import { v4 as uuidv4 } from 'uuid';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
-    
-    
-    
-    const {usersData, setUsersData, fetchDataUsers} = useContext(MainContext);
-    
-    // useEffect(() => {
-        
-    // }, [])
-        
-        const register = (e) => {
-            e.preventDefault();
+    const navigate = useNavigate();
+    const { usersData, setUsersData, helperRegister, setHelperRegister } = useContext(MainContext);
 
-            const newUser = {
-                id: uuidv4(),
-                email: e.target.emailRegister.value,
-                password: e.target.passwordRegister.value,
-                firstName: e.target.firstNameRegister.value,
-                lastName: e.target.lastNameRegister.value,
-                address: e.target.addressRegister.value,
-                postalCode: e.target.postalCodeRegister.value,
-                cardNumber: e.target.cardNumber.value,
-                cardOwner: e.target.owner.value,
-                expDate: e.target.expirationDate.value,
-                CVC: e.target.cvc.value,
-            }
 
+    const register = (e) => {
+
+        e.preventDefault();
+
+        const newUser = {
+            id: uuidv4(),
+            email: e.target.emailRegister.value,
+            password: e.target.passwordRegister.value,
+            firstName: e.target.firstNameRegister.value,
+            lastName: e.target.lastNameRegister.value,
+            address: e.target.addressRegister.value,
+            postalCode: e.target.postalCodeRegister.value,
+            cardNumber: e.target.cardNumber.value,
+            cardOwner: e.target.owner.value,
+            expDate: e.target.expirationDate.value,
+            CVC: e.target.cvc.value,
+        }
+
+
+        if (validate(e) === true) {
             fetch('http://localhost:3000/users', {
                 method: "POST",
                 headers: {
@@ -38,15 +37,26 @@ const Register = () => {
                 },
                 body: JSON.stringify(newUser)
             })
-            .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error));
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .catch(error => console.log(error));
 
-            setUsersData(newUser);            
+            setUsersData(newUser);
+            setHelperRegister(true)
+            navigate('/login');
+        } else {
+            setHelperRegister(false)
         }
+    }
 
-        //const errorMessageRegister = validateRegister();
-        
+    console.log(helperRegister);
+    const errorReg = () => {
+        if (helperRegister === false) {
+            return "Fill in all the fields";
+        }
+    };
+
+
     return (
         <>
             <form onSubmit={(e) => {
@@ -58,35 +68,35 @@ const Register = () => {
                             <h5 className='mb-3'>Register</h5>
                         </div>
                     </div>
-                    
+
                     <div className="col-10">
                         <label className="form-label">Email</label>
-                        <input type="email" className="form-control" name="emailRegister" />
+                        <input type="email" className="form-control" name="emailRegister" required />
                     </div>
                     <div className="col-10">
                         <label className="form-label">Password</label>
-                        <input type="password" className="form-control" name="passwordRegister" />
+                        <input type="password" className="form-control" name="passwordRegister" required />
                     </div>
 
                     <div className='row d-flex align-items-center justify-content-center form-group'>
                         <div className="col-6">
                             <label className="form-label">First name</label>
-                            <input type="text" className="form-control form-double" name="firstNameRegister" />
+                            <input type="text" className="form-control form-double" name="firstNameRegister" required />
                         </div>
                         <div className="col-6">
                             <label className="form-label">Last name</label>
-                            <input type="text" className="form-control" name="lastNameRegister" />
+                            <input type="text" className="form-control" name="lastNameRegister" required />
                         </div>
                     </div>
 
                     <div className='row mb-3 d-flex align-items-center justify-content-center form-group'>
                         <div className="col-6">
                             <label className="form-label">Address</label>
-                            <input type="text" className="form-control" name="addressRegister" />
+                            <input type="text" className="form-control" name="addressRegister" required />
                         </div>
                         <div className="col-6">
                             <label className="form-label">Postal code</label>
-                            <input type="text" className="form-control" name="postalCodeRegister" />
+                            <input type="text" className="form-control" name="postalCodeRegister" required />
                         </div>
                     </div>
 
@@ -96,36 +106,58 @@ const Register = () => {
                         </div>
                     </div>
 
-                        <div className="col-10">
-                            <label className="form-label">Card number</label>
-                            <input type="text" className="form-control" name="cardNumber" />
-                        </div>
-                        <div className="col-10">
-                            <label className="form-label">Name of owner</label>
-                            <input type="text" className="form-control" name="owner" />
-                        </div>
+                    <div className="col-10">
+                        <label className="form-label">Card number</label>
+                        <input type="text" className="form-control" name="cardNumber" required />
+                    </div>
+                    <div className="col-10">
+                        <label className="form-label">Name of owner</label>
+                        <input type="text" className="form-control" name="owner" required />
+                    </div>
 
                     <div className="row mb-3 d-flex align-items-center justify-content-center form-group">
                         <div className="col-6">
                             <label className="form-label">Expiration date</label>
-                            <input type="date" className="form-control" name="expirationDate" />
+                            <input type="date" className="form-control" name="expirationDate" required />
                         </div>
                         <div className="col-6">
                             <label className="form-label">CVC</label>
-                            <input type="number" className="form-control" name="cvc" />
+                            <input type="number" className="form-control" name="cvc" required />
                         </div>
                     </div>
 
-                    {/* <p className='text-danger'>{errorMessageRegister}</p> */}
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <p className='text-danger'>{ errorReg() }</p>
+                    <button type="submit" id="btn-reg" className="btn btn-primary">Submit</button>
                 </div>
             </form>
+
         </>
     )
 }
 
-// const validateRegister = (emailRegister, passwordRegister, firstNameRegister, lastNameRegister, addressRegister, postalCodeRegister, cardNumber, owner, cvc) => {
-//     if ((!emailRegister.includes('@')) && (passwordRegister.length < 3) && (firstNameRegister.length < 3) && lastNameRegister.length < 3 && addressRegister.length < 5 && postalCodeRegister.length === 5 && cardNumber < 16 && owner.length < 3 && cvc.length === 3) return 'Complete all the fields';
-// }
+const validate = (e) => {
+    if (e.target.passwordRegister.value.length < 4) {
+        return false;
+    } else if (!e.target.emailRegister.value.includes('@')) {
+        return false;
+    } else if (e.target.firstNameRegister.value.length < 2) {
+        return false;
+    } else if (e.target.lastNameRegister.value.length < 2) {
+        return false;
+    } else if (e.target.addressRegister.value.length < 5) {
+        return false;
+    } else if (e.target.postalCodeRegister.value.length !== 5) {
+        return false;
+    } else if (e.target.cardNumber.value.length !== 19 && e.target.cardNumber.value.length !== 16) {
+        return false;
+    } else if (e.target.owner.value.length < 2) {
+        return false;
+    } else if (e.target.cvc.value.length !== 3) {
+
+        return false;
+    } else {
+        return true;
+    }
+}
 
 export default Register

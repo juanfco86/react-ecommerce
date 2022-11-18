@@ -24,9 +24,9 @@ const Login = () => {
 
         if (findUser) {
             sessionStorage.setItem('Logged', JSON.stringify(findUser));
-            navigate('/');
+            navigate('/products');
         } else {
-            alert('incorret')
+            return 'incorret';
         }
     }
     
@@ -51,9 +51,7 @@ const Login = () => {
                     </div>
                     <button type="submit" className="mb-4 btn btn-primary" disabled={errorMessage}>Submit</button>
                     <p className='text-danger'>{errorMessage}</p>
-                    {/* <div>
-                        <p>You don't have an account? <Link to="/account" className='link-reg'>Sign up!</Link></p>
-                    </div> */}
+                    
                     <p>Don't have a account? <Link to="/register">Create here!</Link></p>
                 </div>
             </form>
