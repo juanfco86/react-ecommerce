@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import { Toaster } from 'react-hot-toast';
 import * as photos from '../../assets/img'
 import './PhotoCard.css'
-
 
 const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, deleteWish } ) => {
   
@@ -14,34 +14,33 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, d
     img: img,
     amount: amount,
   };
-  
+
+  const [wishValidate, setWishValidate] = useState(JSON.parse(localStorage.getItem('Wish')));
+  const inputRef = useRef(null);
   const imgProduct = photos[`photo${img}`];
 
-  const infoProv = JSON.parse(localStorage.getItem('Wish'));
-
   useEffect(() => {
-    infoProv?.map((e) => {
+    heartStart();
+  }, [])  
+
+  const heartStart = () => {
+    wishValidate?.map((e) => {
+      const inputHelper = inputRef.current;
       if(e.id === product.id) {
-        const icon = document.getElementById(findId);
-        icon.classList.add('fa-solid')
+        inputHelper.classList.add('fa-solid')
       }
     })
-  }, [])
-  
-  const findId = `icon-heart${id}`;
+  }
   
   const heart = (product) => {
-      const icon = document.getElementById(findId);
-      icon.classList.toggle('fa-solid');
-      
-      if (icon.classList.contains('fa-solid')) {
-          toast.success('Added to the wishlist successfully! 😊')
+      const inputHelper = inputRef.current;
+      inputHelper.classList.toggle('fa-solid');
+    
+      if (inputHelper.classList.contains('fa-solid')) {
           addWish(product);
-      } else {
+        } else {
           deleteWish(product);
-          toast.error('Remove to the wishlist successfully! 😒')
       }
-
   };  
     
     return (
@@ -55,7 +54,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, d
                             reverseOrder={false}
                           />
                       </div>
-                    <button className='col-2 d-flex flex-column justify-content-center align-items-center btn btn-outline btn-wish'><i id={findId} onClick={ () => heart(product) } className='fa-regular fa-heart icon-heart'></i></button>
+                    <button onClick={ () => heart(product) } className='col-2 d-flex flex-column justify-content-center align-items-center btn btn-outline btn-wish'><i ref={ inputRef } className='fa-regular fa-heart icon-heart-product'></i></button>
                       <div className="product_title col-9">
                         <a className='withoutStyle' href="#">{ name }</a>
                       </div>

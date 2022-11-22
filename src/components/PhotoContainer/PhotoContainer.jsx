@@ -1,10 +1,14 @@
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import PhotoCard from "../PhotoCard/PhotoCard"
 import './PhotoContainer.css'
 import { v4 as uuidv4 } from 'uuid';
+import { useContext, useEffect } from "react";
+import { MainContext } from "../../context/MainContext";
 
 const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
-
+  
+  const navigate = useNavigate();
+  const { wishes } = useContext(MainContext);
   const [filter, setFilter] = useSearchParams();
   const query = filter.get("query") ?? "";
 
@@ -12,6 +16,10 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
     const { value } = target;
     setFilter({ query: value });
   }
+
+  useEffect(() => {
+    navigate('/');
+  }, [wishes])
   
     return (
         <>  

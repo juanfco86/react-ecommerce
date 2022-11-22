@@ -1,4 +1,3 @@
-import React from 'react'
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react'
@@ -11,7 +10,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
-    const {usersData, setUsersData, fetchDataUsers} = useContext(MainContext);
+    const { usersData, fetchDataUsers, setLoginStatus } = useContext(MainContext);
     
     useEffect(() => {
         fetchDataUsers();
@@ -23,7 +22,8 @@ const Login = () => {
         const findUser = usersData.find((elem) => elem.password === password) && usersData.find((elem) => elem.email === email)
         if (findUser) {
             sessionStorage.setItem('Logged', JSON.stringify(findUser));
-            navigate('/products');
+            setLoginStatus(true);
+            navigate('/user');
         } else {
             return setErrorMessage('Email or password incorrect');
         }

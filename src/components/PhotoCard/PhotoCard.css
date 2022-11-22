@@ -30,7 +30,7 @@
 
 .prod_stock {
     padding: 7px;
-    background-color: #FF000020;
+    background-color: #e6394670;
     width: 90%;
     border-radius: 20%;
     margin-top: 7px;
@@ -58,14 +58,14 @@
     height: 100%;
     object-fit: cover;
     border: 15px solid #3ea4c430; 
-    transition: 1s;
+    transition: 0.5s;
     transition-timing-function: linear;
     
 }
 
 .product_img:hover .photo {
-    transform:scale(1.3);
-    transition: 1s;
+    transform:scale(1.1);
+    transition: 0.5s;
     transition-timing-function: linear;
 }
 
@@ -90,12 +90,6 @@
     border: 0px;
 }
 
-.icon-heart {
-    color: #FF000099;
-    font-size: x-large;
-    
-}
-
 .link-reg {
     text-decoration: none;
 }
@@ -103,6 +97,24 @@
 .price {
     font-size: x-large;
     font-weight: bold;
+}
+
+.btn-buy {
+    background-color: #e6394690;
+    color: black;
+}
+
+.icon-heart-product {
+    font-size: x-large;
+    color: red;
+}
+
+.btn-category-style {
+    text-decoration: none;
+}
+
+.btn-category {
+    color: black;
 }
 
 

@@ -1,3 +1,7 @@
+body {
+    background-color: #1d355790;
+}
+
 .photo-container {
     display: flex;
     flex-direction: row;
@@ -13,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    margin-left: 5px;
 }
 
 .product-cart-buy {
@@ -96,5 +101,54 @@ th, td {
 .form-login {
     margin-top: 15px;
 }
+
+.btn-container {
+    translate: -300px;
+}
+
+.background-img-rods {
+    height: 100px;
+    width: 320px;
+    object-fit: cover;
+    position: relative;
+    left: calc(600px/2 - 40px);
+    top: calc(20px/2 - 10px);
+}
+
+.background-img-reels {
+    height: 100px;
+    width: 320px;
+    object-fit: cover;
+    position: relative;
+    left: calc(500px/2 - 40px);
+    top: calc(20px/2 - 10px);
+}
+
+.background-img-baits {
+    height: 100px;
+    width: 320px;
+    object-fit: cover;
+    position: relative;
+    left: calc(530px/2 - 40px);
+    top: calc(20px/2 - 10px);
+}
+
+.background-img-accesories {
+    height: 100px;
+    width: 320px;
+    object-fit: cover;
+    position: relative;
+    left: calc(550px/2 - 40px);
+    top: calc(20px/2 - 10px);
+}
+
+.td-obj {
+    background-color: darkgrey;
+}
+
+.td-photo {
+    background-color: grey;
+}
+
 
 

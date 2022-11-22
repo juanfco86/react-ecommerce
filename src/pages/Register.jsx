@@ -49,7 +49,6 @@ const Register = () => {
         }
     }
 
-    console.log(helperRegister);
     const errorReg = () => {
         if (helperRegister === false) {
             return "Fill in all the fields";

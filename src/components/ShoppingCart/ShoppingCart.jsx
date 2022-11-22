@@ -30,7 +30,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                                 resetValue={resetValue}
                             />
                         ) 
-                    }) || <h6 className='empty-cart'>Empty Cart</h6>
+                    }) || <h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty Cart</h6>
                 }  
                 <hr />
                 <div className='mb-3'>
