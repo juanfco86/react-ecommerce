@@ -3,7 +3,7 @@ import PhotoCard from "../PhotoCard/PhotoCard"
 import './PhotoContainer.css'
 import { v4 as uuidv4 } from 'uuid';
 import { useContext, useEffect } from "react";
-import { MainContext } from "../../context/MainContext";
+import { MainContext } from "../../context/Main/MainContext";
 
 const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
   
@@ -18,7 +18,7 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
   }
 
   useEffect(() => {
-    navigate('/');
+    navigate('');
   }, [wishes])
   
     return (
@@ -47,6 +47,8 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
                               price={card.price}
                               img={card.img}
                               stock={card.stock}
+                              category={card.category}
+                              description={card.description}
                               amount={card.amount}
                               saveValue={saveValue}
                               addWish={addWish}

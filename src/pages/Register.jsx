@@ -1,23 +1,32 @@
-import { useContext } from 'react'
-import { MainContext } from '../context/MainContext'
 import { v4 as uuidv4 } from 'uuid';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../context/Auth/AuthContext';
+import { useEffect } from 'react';
 
 const Register = () => {
 
-    const navigate = useNavigate();
-    const { usersData, setUsersData, helperRegister, setHelperRegister } = useContext(MainContext);
-
+    
+    const { setHelperRegister, bcrypt, passwordHashed, setPasswordHashed, password, setPassword, usersData, errorRegister, setErrorRegister } = useAuthContext();
+    const navigate = useNavigate();  
+    
+    useEffect(() => {
+        const saltRounds = 10;
+        setPasswordHashed(bcrypt.hash(password, saltRounds, (err, passHashed) => {
+            if (err) {
+                console.log("Error hash:", err);
+            } else {
+                return setPasswordHashed(passHashed);
+            }
+        }));
+    }, [password])
 
     const register = (e) => {
-
         e.preventDefault();
-
+        
         const newUser = {
             id: uuidv4(),
             email: e.target.emailRegister.value,
-            password: e.target.passwordRegister.value,
+            password: passwordHashed,
             firstName: e.target.firstNameRegister.value,
             lastName: e.target.lastNameRegister.value,
             address: e.target.addressRegister.value,
@@ -27,9 +36,8 @@ const Register = () => {
             expDate: e.target.expirationDate.value,
             CVC: e.target.cvc.value,
         }
-
-
-        if (validate(e) === true) {
+        
+        if (validate(e) === true && !usersData.find((elem) => elem.email === newUser.email)) {
             fetch('http://localhost:3000/users', {
                 method: "POST",
                 headers: {
@@ -38,28 +46,23 @@ const Register = () => {
                 body: JSON.stringify(newUser)
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
-                .catch(error => console.log(error));
-
-            setUsersData(newUser);
-            setHelperRegister(true)
-            navigate('/login');
-        } else {
-            setHelperRegister(false)
-        }
+                .then(navigate('/login'))
+                .catch(error => console.log(error))
+                
+                setHelperRegister(true);
+                setErrorRegister(null);
+            } else {
+                setHelperRegister(false);
+                setErrorRegister('Email already exists');
+            }
+        
     }
-
-    const errorReg = () => {
-        if (helperRegister === false) {
-            return "Fill in all the fields";
-        }
-    };
-
 
     return (
         <>
             <form onSubmit={(e) => {
-                register(e);
+                register(e)
+                //passToHash(password)
             }}>
                 <div className='d-flex flex-column align-items-center justify-content-center'>
                     <div className='row'>
@@ -74,7 +77,7 @@ const Register = () => {
                     </div>
                     <div className="col-10">
                         <label className="form-label">Password</label>
-                        <input type="password" className="form-control" name="passwordRegister" required />
+                        <input type="password" className="form-control" name="passwordRegister" onChange={e => setPassword(e.target.value)} required />
                     </div>
 
                     <div className='row d-flex align-items-center justify-content-center form-group'>
@@ -107,11 +110,11 @@ const Register = () => {
 
                     <div className="col-10">
                         <label className="form-label">Card number</label>
-                        <input type="text" className="form-control" name="cardNumber" required />
+                        <input type="text" className="form-control" name="cardNumber" defaultValue="1111111111111111" required />
                     </div>
                     <div className="col-10">
                         <label className="form-label">Name of owner</label>
-                        <input type="text" className="form-control" name="owner" required />
+                        <input type="text" className="form-control" name="owner" defaultValue="1111" required />
                     </div>
 
                     <div className="row mb-3 d-flex align-items-center justify-content-center form-group">
@@ -121,11 +124,12 @@ const Register = () => {
                         </div>
                         <div className="col-6">
                             <label className="form-label">CVC</label>
-                            <input type="number" className="form-control" name="cvc" required />
+                            <input type="number" className="form-control" name="cvc" defaultValue="111" required />
                         </div>
                     </div>
 
-                    <p className='text-danger'>{ errorReg() }</p>
+                    {/* <p className='text-danger'>{ errorReg() }</p> */}
+                    <p className='text-center text-danger'><b>{errorRegister}</b></p>
                     <button type="submit" id="btn-reg" className="btn btn-primary">Submit</button>
                 </div>
             </form>
@@ -152,7 +156,6 @@ const validate = (e) => {
     } else if (e.target.owner.value.length < 2) {
         return false;
     } else if (e.target.cvc.value.length !== 3) {
-
         return false;
     } else {
         return true;

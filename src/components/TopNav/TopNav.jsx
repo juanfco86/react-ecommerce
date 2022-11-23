@@ -1,22 +1,14 @@
-
-import { useContext } from 'react'
 import { memo } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import mainPhoto from '../../assets/img/mainPhoto.png'
 import photo from '../../assets/img/logo.png'
-import { MainContext } from '../../context/MainContext'
 import './TopNav.css'
+import { useAuthContext } from '../../context/Auth/AuthContext'
 
 const TopNav = () => {
 
-    const { loginStatus, setLoginStatus } = useContext(MainContext);
-    const navigate = useNavigate();
-
-    const logout = () => {
-        sessionStorage.removeItem('Logged');
-        setLoginStatus(false);
-        navigate('/login');
-    }
+    const { loginStatus, logout } = useAuthContext();
+    const dataFromUsers = JSON.parse(localStorage.getItem('Logged'));
 
     return (
         <>
@@ -41,7 +33,14 @@ const TopNav = () => {
                         <li>
                             {
                                 !!loginStatus ? (
-                                    <button onClick={ logout } className="btn button-6 btn-nav">Logout</button>
+                                    <Link to="/user" className="nav"><button className="btn button-6 btn-nav" role="button">{dataFromUsers.firstName} <i className="fa-solid fa-user"></i></button></Link>
+                                ) : ""
+                            }
+                        </li>
+                        <li>
+                            {
+                                !!loginStatus ? (
+                                        <button onClick={ logout } className="btn button-6 btn-nav">Logout <i className="fa-solid fa-right-from-bracket"></i></button>
                                     ) : (<Link to="/login" className="nav"><button className="btn button-6 btn-nav" role="button">Login <i className="fa-solid fa-user"></i></button></Link>)
                             }
                             

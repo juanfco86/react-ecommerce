@@ -2,7 +2,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import PhotoCard from "../components/PhotoCard/PhotoCard"
 import { v4 as uuidv4 } from 'uuid';
 import { useContext, useEffect } from "react";
-import { MainContext } from "../context/MainContext";
+import { MainContext } from "../context/Main/MainContext";
 
 const Reels = () => {
 
@@ -47,7 +47,7 @@ const Reels = () => {
                                 }
                             })                            
                             .map((card) => {
-                                    if (card.category === "reel") {
+                                    if (card.category === "Reel") {
                                         return (
                                             <PhotoCard
                                                 key={uuidv4()}
@@ -56,6 +56,8 @@ const Reels = () => {
                                                 price={card.price}
                                                 img={card.img}
                                                 stock={card.stock}
+                                                category={card.category}
+                                                description={card.description}
                                                 amount={card.amount}
                                                 saveValue={saveValue}
                                                 addWish={addWish}

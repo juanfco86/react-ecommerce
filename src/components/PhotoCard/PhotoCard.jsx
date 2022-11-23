@@ -3,8 +3,10 @@ import { useRef } from 'react';
 import { Toaster } from 'react-hot-toast';
 import * as photos from '../../assets/img'
 import './PhotoCard.css'
+import toast from 'react-hot-toast';
+import Accordion from 'react-bootstrap/Accordion';
 
-const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, deleteWish } ) => {
+const PhotoCard = ( { id, name, price, stock, saveValue, img, category, description, amount, addWish, deleteWish } ) => {
   
   const product = {
     id: id,
@@ -13,6 +15,8 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, d
     stock: stock,
     img: img,
     amount: amount,
+    category: category,
+    description: description,
   };
 
   const [wishValidate, setWishValidate] = useState(JSON.parse(localStorage.getItem('Wish')));
@@ -37,12 +41,14 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, d
       inputHelper.classList.toggle('fa-solid');
     
       if (inputHelper.classList.contains('fa-solid')) {
+          toast.success('Added to the wishlist successfully! 😊')
           addWish(product);
         } else {
+          toast.error('Remove to the wishlist successfully! 😒')
           deleteWish(product);
       }
   };  
-    
+
     return (
       <>
           <div className="prod_box">
@@ -86,6 +92,16 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, amount, addWish, d
                         
                         <button onClick={ () => { saveValue(product) } } className="button-6 btn-buy">Buy<i className="fa-solid fa-cart-plus"></i></button>
                     </div>
+                </div>
+                <div className='mb-2 mt-2'>
+                    <Accordion defaultActiveKey="1">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>{ category } description</Accordion.Header>
+                            <Accordion.Body>
+                                { description }
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
                 </div>
           </div>
       </>

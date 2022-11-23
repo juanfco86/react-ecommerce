@@ -1,64 +1,49 @@
-import { useContext } from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { MainContext } from '../context/MainContext';
+import { Link } from 'react-router-dom';
+import { useAuthContext } from '../context/Auth/AuthContext'
 
 const Login = () => {
 
-    const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
-    const { usersData, fetchDataUsers, setLoginStatus } = useContext(MainContext);
+    const { login, errorMessage, email, setEmail, password, setPassword } = useAuthContext();
     
-    useEffect(() => {
-        fetchDataUsers();
-    }, [])
-    
-    
-    const login = (email, password) => {
-        // Busca los usuarios que coincidan con ese email y password
-        const findUser = usersData.find((elem) => elem.password === password) && usersData.find((elem) => elem.email === email)
-        if (findUser) {
-            sessionStorage.setItem('Logged', JSON.stringify(findUser));
-            setLoginStatus(true);
-            navigate('/user');
-        } else {
-            return setErrorMessage('Email or password incorrect');
-        }
-    }
-    const [errorMessage, setErrorMessage] = useState('');
     // Si el mensaje de error esta vacio, devuelve validate con los errores que tenga el usuario
     const errorAux = () => {
         if(errorMessage === '') {
             return validate(email, password);
         }
     } 
+
+
     
     return (
         <>
-            <form className='form-login' onSubmit={(e) => {
-                e.preventDefault();
-                login(email, password);
-            }}>
-                <div className='d-flex flex-column align-items-center justify-content-center'>
-                    <div className='row'>
-                        <h5>Login</h5>
+            <div className="d-flex justify-content-center align-items-center">
+
+                <form className='form-login col-10' onSubmit={(e) => {
+                    e.preventDefault();
+                    login(email, password);
+                }}>
+
+                    <div className='d-flex flex-column align-items-center justify-content-center shadow'>
+                        <div className='row col-12'>
+                            <h5 className='bg-primary text-white text-center font-weight-bolder p-1'>Login</h5>
+                        </div>
+                        <div className="col-12 form-group mb-3">
+                            <label className="form-label">Email</label>
+                            <input type="email" className="form-control col-12" name="email" onChange={e => setEmail(e.target.value)} />
+                        </div>
+                        <div className="mb-4 col-12 form-group">
+                            <label className="form-label">Password</label>
+                            <input type="password" className="form-control col-12" name="password" onChange={e => setPassword(e.target.value)} />
+                        </div>
+                        <div className="row col-8 mb-2 mt-1">
+                            <button type="submit" className="mb-3 btn btn-primary btn-block p-2">Submit</button>
+                        </div>
+                        <p className='text-danger'>{errorAux()} {errorMessage}</p>
+                        <p className='text-white'>Don't have a account? <Link to="/register" className='text-decoration-none text-warning'>Sign up!</Link></p>
                     </div>
-                    <div className="col-10">
-                        <label className="form-label">Email address</label>
-                        <input type="email" className="form-control col-12" name="email" value={email} onChange={e => setEmail(e.target.value)} />
-                    </div>
-                    <div className="mb-3 col-10">
-                        <label className="form-label">Password</label>
-                        <input type="password" className="form-control col-12" name="password" value={password} onChange={e => setPassword(e.target.value)} />
-                    </div>
-                    <button type="submit" className="mb-4 btn btn-primary">Submit</button>
-                    <p className='text-danger'>{errorAux()} {errorMessage}</p>
-                    <p>Don't have a account? <Link to="/register">Create here!</Link></p>
-                </div>
-            </form>
+                </form>
+</div>
         </>
     )
 }
@@ -68,8 +53,7 @@ const validate = (email, password) => {
         return 'Write a valid email';
     } else if (password.length < 4) {
         return 'Enter your password';
-    } 
-    //else return "Email or password incorrect, try again!";
+    }
 }
 
 export default Login

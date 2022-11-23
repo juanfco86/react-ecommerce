@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react'
 import PhotoContainer from '../components/PhotoContainer/PhotoContainer'
 import ShoppingCart from '../components/ShoppingCart/ShoppingCart'
-import { MainContext } from '../context/MainContext'
+import { MainContext } from '../context/Main/MainContext'
 
 const Home = () => {
         

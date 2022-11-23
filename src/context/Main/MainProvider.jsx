@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
 import { useState } from 'react'
 import { MainContext } from './MainContext'
-import { WishReducer } from '../helper/Reducer/WishReducer'
+import { WishReducer } from '../../helper/Reducer/WishReducer'
 import toast from 'react-hot-toast';
 
 const MainProvider = ({ children }) => {
@@ -16,28 +16,11 @@ const MainProvider = ({ children }) => {
         return JSON.parse(localStorage.getItem('Wish')) || [];
     }
     
-    const [usersData, setUsersData] = useState([]);
     const [helper, setHelper] = useState(false);
-    const [helperRegister, setHelperRegister] = useState(false);
     const [buy, setBuy] = useState(saveCartBuy);
-    const [loginStatus, setLoginStatus] = useState(false);
     const [ wishes, dispatch ] = useReducer(WishReducer, [], init);
     
     const url = "http://localhost:3000/data";
-    const urlUsers = "http://localhost:3000/users";
-    
-    // Pasar a CONTEXT los fetch --> setUsetData y setProduct
-    const fetchDataUsers = () => {
-        try {
-            setTimeout(async () => {
-                const response = await fetch(urlUsers);
-                const dataUsers = await response.json();
-                setUsersData(dataUsers);
-            }, 50)
-        } catch {
-            console.log("Error");
-        }
-    }
 
     const fetchData = () => {
         try {
@@ -62,7 +45,6 @@ const MainProvider = ({ children }) => {
             type: 'save_wish',
             payload: product
         }
-        toast.success('Added to the wishlist successfully! 😊')
         dispatch(action);     
     }
     
@@ -71,7 +53,6 @@ const MainProvider = ({ children }) => {
             type: 'delete_wish',
             payload: product.id
         }
-        toast.error('Remove to the wishlist successfully! 😒')
         dispatch(action);    
     }
 
@@ -85,14 +66,14 @@ const MainProvider = ({ children }) => {
                     amount: findProduct.amount + 1
                 } : e)
                 )
-        } else {
-            toast.success('Added to the cart successfully! 💖')
-            setBuy([...elem, { ...product, amount: 1 }]);
+            } else {
+                toast.success('Added to the cart successfully! 💖')
+                setBuy([...elem, { ...product, amount: 1 }]);
         }
     }
     
     return (
-        <MainContext.Provider value={{ buy, setBuy, products, setProducts, usersData, setUsersData, fetchDataUsers, helperRegister, setHelperRegister, loginStatus, setLoginStatus, wishes, dispatch, addWish, deleteWish, saveValue }}>
+        <MainContext.Provider value={{ buy, setBuy, products, setProducts, wishes, dispatch, addWish, deleteWish, saveValue }}>
             { children }
         </MainContext.Provider>
     )

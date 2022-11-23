@@ -1,12 +1,12 @@
 import { useContext, useEffect } from "react";
-import { MainContext } from "../../context/MainContext";
+import { MainContext } from "../../context/Main/MainContext";
 import PhotoCard from "../PhotoCard/PhotoCard"
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from "react-router-dom";
 
 const WishList = () => {
 
-    const { wishes, saveValue, products, addWish, deleteWish, buy, setBuy, decreaseValue, resetValue } = useContext(MainContext);
+    const { wishes, saveValue, addWish, deleteWish, buy, setBuy, decreaseValue, resetValue } = useContext(MainContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -39,6 +39,8 @@ const WishList = () => {
                                     img={card.img}
                                     stock={card.stock}
                                     amount={card.amount}
+                                    category={card.category}
+                                    description={card.description}
                                     buy={buy}
                                     setBuy={setBuy}
                                     saveValue={saveValue}

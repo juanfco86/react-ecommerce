@@ -1,14 +1,18 @@
 import { useContext } from 'react'
-import { MainContext } from '../context/MainContext'
+import { MainContext } from '../context/Main/MainContext'
 import * as photos from '../assets/img'
 import TotalPrice from '../components/TotalPrice/TotalPrice';
 import Login from './Login';
-import Register from './Register';
 import { v4 as uuidv4 } from 'uuid';
 import User from './User';
+import { useAuthContext } from '../context/Auth/AuthContext';
 
 const Products = () => {
-    const { buy, loginStatus } = useContext(MainContext);
+    const { buy } = useContext(MainContext);
+    const { loginStatus } = useAuthContext();
+
+    // COMPROBAR SI EL USUARIO ESTA LOGEADO Y SI LO ESTA PERMITIR AVANZAR EN BOTON SUBMIT HACIA UNA PAGINA DE COMPROBACION DE DATOS FINALES,
+    // SI ES DONDE EL USUARIO QUIERE REALIZAR LOS ENVIOS, ¿SI QUIERE PAGAR CON ESA TARJETA? Y SE REALIZA PAGO
 
     return (
         <>
@@ -60,15 +64,13 @@ const Products = () => {
                 </div>
             }
             {
-                loginStatus ? (
+                !!loginStatus ? (
                     <div className='col-4 div-double'>
                         <User />
                     </div>
                 ) : (
                     <div className='col-4 div-double'>
                         <Login />
-                        <hr />
-                        <Register />
                     </div>
                 )
             }
