@@ -25,7 +25,9 @@ const CountApp = ({ price, img, name, amount, stock, buy, setBuy, id, saveValue,
     
     // BOTON DE INCREMENTAR VALOR (HOME)
     const increaseAmount = (product) => {
-        saveValue(product);
+        if (amount < stock) {
+            saveValue(product);
+        }
     }
     
     // BOTON DE REDUCIR VALOR

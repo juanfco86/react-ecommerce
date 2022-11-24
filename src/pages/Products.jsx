@@ -11,9 +11,6 @@ const Products = () => {
     const { buy } = useContext(MainContext);
     const { loginStatus } = useAuthContext();
 
-    // COMPROBAR SI EL USUARIO ESTA LOGEADO Y SI LO ESTA PERMITIR AVANZAR EN BOTON SUBMIT HACIA UNA PAGINA DE COMPROBACION DE DATOS FINALES,
-    // SI ES DONDE EL USUARIO QUIERE REALIZAR LOS ENVIOS, ¿SI QUIERE PAGAR CON ESA TARJETA? Y SE REALIZA PAGO
-
     return (
         <>
             <div className='row'>
