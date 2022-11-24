@@ -29,7 +29,7 @@ const WishList = () => {
             <div className="photo-container">
                 <div className="row photo-row">
                     {
-                        wishes && wishes.length > 0 && wishes.map((card) => {
+                        (wishes && wishes.length > 0 && wishes.map((card) => {
                             return (
                                 <PhotoCard
                                     key={uuidv4()}
@@ -50,7 +50,7 @@ const WishList = () => {
                                     deleteWish={deleteWish}
                                 />
                             ) 
-                        }) || <h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty wish list</h6>
+                        })) || (<h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty wish list</h6>)
                     }  
                 </div>
             </div>

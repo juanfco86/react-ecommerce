@@ -11,7 +11,6 @@ const AuthProvider = ({ children }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordHashed, setPasswordHashed] = useState('');
-    const [passwordValidate, setPasswordValidate] = useState('');
     const [usersData, setUsersData] = useState([]);
     const [helperRegister, setHelperRegister] = useState(false);
     const [loginStatus, setLoginStatus] = useState(sessionStorage.getItem('Logged') ?? false);
@@ -31,33 +30,27 @@ const AuthProvider = ({ children }) => {
             console.log("Error");
         }
     }
-
     
-    const login = useCallback(function(email, password) {
-        console.log(passwordHashed);
-        console.log(password);
-        //console.log(usersData.find((elem) => elem.password === password));
-        const checkPassword = (password) => {
-            bcrypt.compare(password, passwordHashed, (err, coincide) => {
-                if (err) {
-                    console.log('Error:', err);
-                } else {
-                    setPasswordValidate(coincide);
-                }
-            })
-        } 
-        
-        // Busca los usuarios que coincidan con ese email y password
-        const findUser = usersData.find((elem) => elem.password === password) && usersData.find((elem) => elem.email === email)
-        console.log(findUser);
-        if (findUser) {
-            sessionStorage.setItem('Logged', true);
-            localStorage.setItem('Logged', JSON.stringify(findUser));
-            setLoginStatus(true);
-        } else {
-            return setErrorMessage('Email or password incorrect');
-        }
-    })
+    const login = function(email, password) {
+        usersData.find((elem) => {
+            if (elem.email === email) {
+                bcrypt.compare(password, elem.password, (err, coincide) => {
+                    if (err) {
+                        console.log('Error:', err);
+                    } else if (coincide) {
+                        // SI LA CONTRASEÑA ES IGUAL HACE ESTO
+                        sessionStorage.setItem('Logged', true);
+                        localStorage.setItem('Logged', JSON.stringify(elem));
+                        setLoginStatus(true);
+                    } else {
+                        setErrorMessage('Password incorrect')
+                    }
+                })
+            } else {
+                setErrorMessage('Email incorrect')
+            }
+        });
+    }
 
     const logout = useCallback(function() {
         sessionStorage.removeItem('Logged');
@@ -77,7 +70,6 @@ const AuthProvider = ({ children }) => {
             setErrorMessage,
             errorRegister,
             setErrorRegister,
-            usersData,
             fetchDataUsers,
             email,
             password,
@@ -85,11 +77,10 @@ const AuthProvider = ({ children }) => {
             setPassword,
             helperRegister,
             setHelperRegister,
-            bcrypt,
             passwordHashed,
             setPasswordHashed
         }),
-        [login, logout, loginStatus, email, password, passwordHashed]
+        [login, logout, loginStatus, email, password, passwordHashed, errorMessage, errorRegister, helperRegister]
     );
 
     

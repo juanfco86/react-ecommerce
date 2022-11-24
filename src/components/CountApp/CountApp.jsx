@@ -21,12 +21,12 @@ const CountApp = ({ price, img, name, amount, stock, buy, setBuy, id, saveValue,
     // QUE LO MUESTRE CADA VEZ QUE prov RECIBE CAMBIOS
     useEffect(() => {
         setBuy(prov);
-    }, [prov])
+    })
     
     // BOTON DE INCREMENTAR VALOR (HOME)
     const increaseAmount = (product) => {
         if (amount < stock) {
-            saveValue(product);
+            return saveValue(product);
         }
     }
     

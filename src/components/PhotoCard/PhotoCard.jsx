@@ -23,10 +23,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
   const inputRef = useRef(null);
   const imgProduct = photos[`photo${img}`];
 
-  useEffect(() => {
-    heartStart();
-  }, [])  
-
+  
   const heartStart = () => {
     wishValidate?.map((e) => {
       const inputHelper = inputRef.current;
@@ -35,11 +32,17 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
       }
     })
   }
-  
+
+  // SE REALIZA ESTO, SOLO UNA VEZ, AL ENTRAR POR PRIMERA VEZ A LA PAGINA POR EL ARRAY DE DEPENDENCIAS, QUE BUSCA SI EL OBJETO YA EXISTE EN EL LS
+  useEffect(() => {
+    heartStart();
+  })
+
   const heart = (product) => {
+      // USO DE USEREF PARA IDENTIFICAR LOS DATOS A LOS QUE QUEREMOS ACCEDER
       const inputHelper = inputRef.current;
       inputHelper.classList.toggle('fa-solid');
-    
+
       if (inputHelper.classList.contains('fa-solid')) {
           toast.success('Added to the wishlist successfully! 😊')
           addWish(product);
@@ -62,14 +65,16 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
                       </div>
                     <button onClick={ () => heart(product) } className='col-2 d-flex flex-column justify-content-center align-items-center btn btn-outline btn-wish'><i ref={ inputRef } className='fa-regular fa-heart icon-heart-product'></i></button>
                       <div className="product_title col-9">
-                        <a className='withoutStyle' href="#">{ name }</a>
+                        <span>
+                          <b>
+                            { name }
+                          </b>
+                        </span>
                       </div>
                     </div>
 
                     <div className="product_img">
-                      <a className='withoutStyle' href="#">
-                        <img className='photo withoutStyle' src={ imgProduct } alt={ name } border="0" />
-                      </a>
+                      <img className='photo withoutStyle' src={ imgProduct } alt={ name } border="0" />
                     </div>
                     
                     <div className='prod_container'>

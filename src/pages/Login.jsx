@@ -12,8 +12,6 @@ const Login = () => {
             return validate(email, password);
         }
     } 
-
-
     
     return (
         <>
@@ -43,7 +41,7 @@ const Login = () => {
                         <p className='text-white'>Don't have a account? <Link to="/register" className='text-decoration-none text-warning'>Sign up!</Link></p>
                     </div>
                 </form>
-</div>
+            </div>
         </>
     )
 }

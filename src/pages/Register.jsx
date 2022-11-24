@@ -11,13 +11,13 @@ const Register = () => {
     
     useEffect(() => {
         const saltRounds = 10;
-        setPasswordHashed(bcrypt.hash(password, saltRounds, (err, passHashed) => {
+        bcrypt.hash(password, saltRounds, (err, passHashed) => {
             if (err) {
                 console.log("Error hash:", err);
             } else {
                 return setPasswordHashed(passHashed);
             }
-        }));
+        });
     }, [password])
 
     const register = (e) => {

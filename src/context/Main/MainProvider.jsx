@@ -2,7 +2,6 @@ import { useReducer } from 'react';
 import { useState } from 'react'
 import { MainContext } from './MainContext'
 import { WishReducer } from '../../helper/Reducer/WishReducer'
-import toast from 'react-hot-toast';
 
 const MainProvider = ({ children }) => {
     
@@ -22,6 +21,7 @@ const MainProvider = ({ children }) => {
     
     const url = "http://localhost:3000/data";
 
+    // COGE LA INFORMACION DEL SERVIDOR
     const fetchData = () => {
         try {
             setTimeout(async () => {
@@ -37,9 +37,9 @@ const MainProvider = ({ children }) => {
             setHelper(false);
         }
     }
-    
-    const [products, setProducts] = useState(fetchData());
 
+    const [products, setProducts] = useState(fetchData());
+    
     const addWish = (product) => {
         const action = {
             type: 'save_wish',
@@ -57,9 +57,12 @@ const MainProvider = ({ children }) => {
     }
 
     const saveValue = (product) => {
+        // COGE LA INFORMACION DEL LS
         const elem = JSON.parse(localStorage.getItem('Result'));
+        // BUSCA LOS PRODUCTOS QUE COINCIDAN EN SU ID
         const findProduct = elem.find((card) => card.id === product.id);
         if (findProduct) {
+            // SI EXISTE EL PRODUCTO, COPIA EL CONTENIDO Y LE SUMA UNO
             setBuy(
                 elem.map(e => e.id === product.id ? {
                     ...findProduct,
@@ -67,8 +70,9 @@ const MainProvider = ({ children }) => {
                 } : e)
                 )
             } else {
-                toast.success('Added to the cart successfully! 💖')
+                // SI NO COPIA EL CONTENIDO Y INTRODUCE EL PRIMERO
                 setBuy([...elem, { ...product, amount: 1 }]);
+                
         }
     }
     

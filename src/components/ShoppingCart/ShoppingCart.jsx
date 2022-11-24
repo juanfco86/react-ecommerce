@@ -13,7 +13,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                 <h4 className="title_box">Shopping Cart</h4>
                 <hr />
                 {
-                    buy && buy.length > 0 && buy.map((card, index) => {
+                    (buy && buy.length > 0 && buy.map((card, index) => {
                         return (
                             <Cart
                                 key={uuidv4()}
@@ -30,7 +30,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                                 resetValue={resetValue}
                             />
                         ) 
-                    }) || <h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty Cart</h6>
+                    })) || (<h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty Cart</h6>)
                 }  
                 <hr />
                 <div className='mb-3'>
@@ -40,7 +40,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                 </div>
 
                 <div className='mb-3 d-flex flex-column justify-content-center align-items-center'>
-                    <Link to="/products" className='nav'><button className="btn button-6" role="button">Checkout<i className="fa-solid fa-credit-card"></i></button></Link>
+                    <Link to="/products" className='nav'><button className="btn button-6">Checkout<i className="fa-solid fa-credit-card"></i></button></Link>
                 </div>
             </aside>
         </>
