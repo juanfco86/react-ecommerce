@@ -10,7 +10,6 @@ const AuthProvider = ({ children }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordHashed, setPasswordHashed] = useState('');
     const [usersData, setUsersData] = useState([]);
     const [helperRegister, setHelperRegister] = useState(false);
     const [loginStatus, setLoginStatus] = useState(sessionStorage.getItem('Logged') ?? false);
@@ -30,7 +29,7 @@ const AuthProvider = ({ children }) => {
             console.log("Error");
         }
     }
-    
+
     const login = function(email, password) {
         usersData.find((elem) => {
             if (elem.email === email) {
@@ -70,17 +69,15 @@ const AuthProvider = ({ children }) => {
             setErrorMessage,
             errorRegister,
             setErrorRegister,
-            fetchDataUsers,
+            usersData,
             email,
             password,
             setEmail,
             setPassword,
             helperRegister,
             setHelperRegister,
-            passwordHashed,
-            setPasswordHashed
         }),
-        [login, logout, loginStatus, email, password, passwordHashed, errorMessage, errorRegister, helperRegister]
+        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister]
     );
 
     

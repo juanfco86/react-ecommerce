@@ -445,6 +445,19 @@
       "cardOwner": "1111",
       "expDate": "2022-12-11",
       "CVC": "111"
+    },
+    {
+      "id": "c722f23e-f5c9-4e21-96c7-f67b9c9f8d37",
+      "email": "juanfco86@gmail123asdasdasdascom",
+      "password": "$2a$10$DC7FKjU36Jk0XM8wQLWhi.Ht8BwSSfS.uwSVVn6Mb4I8MpduZtPea",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640",
+      "cardNumber": "1111111111111111",
+      "cardOwner": "1111",
+      "expDate": "2022-12-08",
+      "CVC": "111"
     }
   ]
 }

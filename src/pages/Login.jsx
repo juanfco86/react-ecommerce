@@ -26,15 +26,15 @@ const Login = () => {
                         <div className='row col-12'>
                             <h5 className='bg-primary text-white text-center font-weight-bolder p-1'>Login</h5>
                         </div>
-                        <div className="col-12 form-group mb-3">
+                        <div className="col-6 mb-3">
                             <label className="form-label">Email</label>
                             <input type="email" className="form-control col-12" name="email" onChange={e => setEmail(e.target.value)} />
                         </div>
-                        <div className="mb-4 col-12 form-group">
+                        <div className="mb-4 col-6">
                             <label className="form-label">Password</label>
                             <input type="password" className="form-control col-12" name="password" onChange={e => setPassword(e.target.value)} />
                         </div>
-                        <div className="row col-8 mb-2 mt-1">
+                        <div className="row col-6 mb-2 mt-1">
                             <button type="submit" className="mb-3 btn btn-primary btn-block p-2">Submit</button>
                         </div>
                         <p className='text-danger'>{errorAux()} {errorMessage}</p>
