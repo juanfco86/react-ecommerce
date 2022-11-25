@@ -4,7 +4,6 @@ import { MainContext } from './MainContext'
 import { WishReducer } from '../../helper/Reducer/WishReducer'
 
 const MainProvider = ({ children }) => {
-    
     let saveCartBuy = [];
     
     if (localStorage.getItem('Result')) {
@@ -67,15 +66,13 @@ const MainProvider = ({ children }) => {
                 elem.map(e => e.id === product.id ? {
                     ...findProduct,
                     amount: findProduct.amount + 1
-                } : e)
-                )
+                } : e))
             } else {
                 // SI NO COPIA EL CONTENIDO Y INTRODUCE EL PRIMERO
                 setBuy([...elem, { ...product, amount: 1 }]);
-                
         }
     }
-    
+
     return (
         <MainContext.Provider value={{ buy, setBuy, products, setProducts, wishes, dispatch, addWish, deleteWish, saveValue }}>
             { children }

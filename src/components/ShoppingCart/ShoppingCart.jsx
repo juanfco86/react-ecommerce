@@ -13,7 +13,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                 <h4 className="title_box">Shopping Cart</h4>
                 <hr />
                 {
-                    (buy && buy.length > 0 && buy.map((card, index) => {
+                    (buy && buy.length > 0 && buy.map((card) => {
                         return (
                             <Cart
                                 key={uuidv4()}

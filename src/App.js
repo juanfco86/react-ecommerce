@@ -11,12 +11,10 @@ function App() {
     <>
       <AuthProvider>
         <MainProvider>
-          {/* apiprovider */}
             <BrowserRouter>
               <TopNav />
               <Router />
             </BrowserRouter> 
-          {/* /apiprovider */}
         </MainProvider>
       </AuthProvider>
     </>

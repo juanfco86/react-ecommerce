@@ -5,8 +5,6 @@ import { useContext, useEffect } from "react";
 import { MainContext } from "../context/Main/MainContext";
 
 const Rods = () => {
-
-    //const navigate = useNavigate();
     const { wishes, products, addWish, deleteWish, saveValue, buy } = useContext(MainContext);
     const [filter, setFilter] = useSearchParams();
     const query = filter.get("query") ?? "";
@@ -24,10 +22,6 @@ const Rods = () => {
     useEffect(() => {
         localStorage.setItem("Result", JSON.stringify(buy));
     }, [buy])
-
-    // useEffect(() => {
-    //     navigate('');
-    // }, [wishes])
 
     return (
         <>

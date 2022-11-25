@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import mainPhoto from '../../assets/img/mainPhoto.png'
-import photo from '../../assets/img/logo.png'
+import mainPhoto from '../../assets/img/mainPhoto.avif'
+import photo from '../../assets/img/logo.avif'
 import './TopNav.css'
 import { useAuthContext } from '../../context/Auth/AuthContext'
 

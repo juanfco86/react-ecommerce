@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import rods from '../assets/img/rods.jpg'
-import reels from '../assets/img/reels.jpg'
-import baits from '../assets/img/baits.jpg'
-import accesories from '../assets/img/accesories.jpg'
+import rods from '../assets/img/rods.avif'
+import reels from '../assets/img/reels.avif'
+import baits from '../assets/img/baits.avif'
+import accesories from '../assets/img/accesories.avif'
 
 const Category = () => {
     return (

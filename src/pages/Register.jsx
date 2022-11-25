@@ -12,7 +12,7 @@ const Register = () => {
         const saltRounds = 10;
         
         if (validate(e) === true) {
-            const passRegister = bcrypt.hash(e.target.passwordRegister.value, saltRounds, (err, passHashed) => {
+            bcrypt.hash(e.target.passwordRegister.value, saltRounds, (err, passHashed) => {
                 if (err) {
                     console.log("Error hash:", err);
                 } else {
@@ -74,7 +74,7 @@ const Register = () => {
                     <div className="row col-6 mt-2 mb-3">
                         <div className="col-12">
                             <label className="form-label">Password</label>
-                            <input type="password" className="form-control" name="passwordRegister" /*onChange={e => setPassword(e.target.value)}*/ required />
+                            <input type="password" className="form-control" name="passwordRegister" required />
                         </div>
                     </div>
                     <div className="row col-6 mb-3 d-flex align-items-center justify-content-center ">
