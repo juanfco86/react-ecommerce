@@ -30,26 +30,27 @@ const AuthProvider = ({ children }) => {
         }
     }
 
-    const login = function(email, password) {
+    const login = useCallback(function(email, password) {
         usersData.find((elem) => {
             if (elem.email === email) {
                 bcrypt.compare(password, elem.password, (err, coincide) => {
                     if (err) {
-                        console.log('Error:', err);
+                        return console.log('Error:', err);
                     } else if (coincide) {
                         // SI LA CONTRASEÑA ES IGUAL HACE ESTO
                         sessionStorage.setItem('Logged', true);
                         localStorage.setItem('Logged', JSON.stringify(elem));
-                        setLoginStatus(true);
+                        return setLoginStatus(true);
                     } else {
-                        setErrorMessage('Password incorrect')
+                        return setErrorMessage('Password incorrect')
                     }
                 })
             } else {
-                setErrorMessage('Email incorrect')
+                return setErrorMessage('Email incorrect')
             }
+            return '';
         });
-    }
+    }, [bcrypt, usersData])
 
     const logout = useCallback(function() {
         sessionStorage.removeItem('Logged');
@@ -77,7 +78,7 @@ const AuthProvider = ({ children }) => {
             helperRegister,
             setHelperRegister,
         }),
-        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister]
+        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData]
     );
 
     

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRef } from 'react';
 import { Toaster } from 'react-hot-toast';
 import * as photos from '../../assets/img'
@@ -19,17 +19,17 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
     description: description,
   };
 
-  const [wishValidate, setWishValidate] = useState(JSON.parse(localStorage.getItem('Wish')));
+  const wishValidate = JSON.parse(localStorage.getItem('Wish'));
   const inputRef = useRef(null);
   const imgProduct = photos[`photo${img}`];
-
   
   const heartStart = () => {
     wishValidate?.map((e) => {
       const inputHelper = inputRef.current;
       if(e.id === product.id) {
-        inputHelper.classList.add('fa-solid')
+        return inputHelper.classList.add('fa-solid')
       }
+      return '';
     })
   }
 
@@ -37,6 +37,10 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
   useEffect(() => {
     heartStart();
   })
+
+  useEffect(() => {
+    toast.success('AJA');
+  }, [saveValue])
 
   const heart = (product) => {
       // USO DE USEREF PARA IDENTIFICAR LOS DATOS A LOS QUE QUEREMOS ACCEDER
@@ -95,7 +99,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
                           </div>
                         </div>
                         
-                        <button onClick={ () => { saveValue(product) } } className="button-6 btn-buy">Buy<i className="fa-solid fa-cart-plus"></i></button>
+                        <button onClick={ () => saveValue(product) } className="button-6 btn-buy">Buy<i className="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </div>
                 <div className='mb-2 mt-2'>
