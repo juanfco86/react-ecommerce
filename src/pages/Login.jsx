@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useAuthContext } from '../context/Auth/AuthContext'
 
 const Login = () => {
-
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
     const { login, errorMessage, email, setEmail, password, setPassword } = useAuthContext();
     

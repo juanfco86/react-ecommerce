@@ -29,7 +29,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                                 decreaseValue={decreaseValue}
                                 resetValue={resetValue}
                             />
-                        ) 
+                        )
                     })) || (<h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty Cart</h6>)
                 }  
                 <hr />
@@ -40,7 +40,9 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                 </div>
 
                 <div className='mb-3 d-flex flex-column justify-content-center align-items-center'>
-                    <Link to="/products" className='nav'><button className="btn button-6">Checkout<i className="fa-solid fa-credit-card"></i></button></Link>
+                    <Link to="/products" className='nav'>
+                        <button className="btn button-6">Go to cart<i className="fa-solid fa-shopping-cart"></i></button>
+                    </Link>
                 </div>
             </aside>
         </>

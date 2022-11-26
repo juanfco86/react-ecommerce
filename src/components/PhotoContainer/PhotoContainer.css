@@ -95,7 +95,7 @@ th, td {
 }
 
 .div-double {
-    border-left: 4px solid #00000030;
+    border-right: 4px solid #00000030;
 }
 
 .form-login {
@@ -149,5 +149,6 @@ th, td {
 .td-photo {
     background-color: grey;
 }
+
 
 

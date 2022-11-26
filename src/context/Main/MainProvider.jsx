@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { useState } from 'react'
 import { MainContext } from './MainContext'
 import { WishReducer } from '../../helper/Reducer/WishReducer'
@@ -17,27 +17,29 @@ const MainProvider = ({ children }) => {
     const [helper, setHelper] = useState(false);
     const [buy, setBuy] = useState(saveCartBuy);
     const [ wishes, dispatch ] = useReducer(WishReducer, [], init);
+    const [products, setProducts] = useState([]);
     
     const url = "http://localhost:3000/data";
 
     // COGE LA INFORMACION DEL SERVIDOR
-    const fetchData = () => {
+    const fetchData = async () => {
         try {
-            setTimeout(async () => {
-                if (helper === false) {
-                    const response = await fetch(url);
-                    const data = await response.json();
-                    setHelper(true);
-                    setProducts(data)
-                }
-            }, 50)
+            if (helper === false) {
+                const response = await fetch(url);
+                const data = await response.json();
+                setHelper(true);
+                setProducts(data)
+            }
         } catch {
             console.log("Error");
             setHelper(false);
         }
     }
 
-    const [products, setProducts] = useState(fetchData());
+    useEffect(() => {
+        fetchData();
+    })
+
     
     const addWish = (product) => {
         const action = {

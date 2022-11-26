@@ -8,9 +8,10 @@ const AuthProvider = ({ children }) => {
     // IMPORTANDO ENCRIPTADOR DE CONTRASEÑAS
     const bcrypt = require("bcryptjs");
 
+    const [dataUser, setDataUser] = useState([]);
+    const [usersData, setUsersData] = useState([]);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [usersData, setUsersData] = useState([]);
     const [helperRegister, setHelperRegister] = useState(false);
     const [loginStatus, setLoginStatus] = useState(sessionStorage.getItem('Logged') ?? false);
     const [errorMessage, setErrorMessage] = useState('');
@@ -18,13 +19,11 @@ const AuthProvider = ({ children }) => {
     const urlUsers = "http://localhost:3000/users";
 
     // Pasar a CONTEXT los fetch --> setUsetData y setProduct
-    const fetchDataUsers = () => {
+    const fetchDataUsers = async () => {
         try {
-            setTimeout(async () => {
-                const response = await fetch(urlUsers);
-                const dataUsers = await response.json();
-                setUsersData(dataUsers);
-            }, 50)
+            const response = await fetch(urlUsers);
+            const dataUsers = await response.json();
+            setUsersData(dataUsers);
         } catch {
             console.log("Error");
         }
@@ -33,6 +32,7 @@ const AuthProvider = ({ children }) => {
     const login = useCallback(function(email, password) {
         usersData.find((elem) => {
             if (elem.email === email) {
+                console.log(elem);
                 bcrypt.compare(password, elem.password, (err, coincide) => {
                     if (err) {
                         return console.log('Error:', err);
@@ -57,10 +57,11 @@ const AuthProvider = ({ children }) => {
         localStorage.removeItem('Logged');
         setLoginStatus(false);
     }, [])
-
+    
     useEffect(() => {
         fetchDataUsers();
-    }, [])
+        setDataUser(JSON.parse(localStorage.getItem('Logged')));
+    }, [usersData])
 
     const value = useMemo(() => ({
             login,
@@ -77,11 +78,12 @@ const AuthProvider = ({ children }) => {
             setPassword,
             helperRegister,
             setHelperRegister,
+            dataUser,
+            setDataUser
         }),
-        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData]
+        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData, dataUser]
     );
 
-    
 
     return (
         <AuthContext.Provider value={ value }>

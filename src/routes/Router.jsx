@@ -9,6 +9,7 @@ import Register from '../pages/Register'
 import User from '../pages/User'
 import Reels from '../pages/Reels'
 import Rods from '../pages/Rods'
+import Payed from '../pages/Payed'
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
 
@@ -21,7 +22,10 @@ const Router = () => {
                 <Route path="/login" element={ <Login /> } />
             </Route>
             <Route path='/user' element={ <PrivateRoute /> }>
-                <Route path='/user' element={ <User /> } />
+                <Route index element={ <User /> } />
+            </Route>
+            <Route path='/payed' element={ <PrivateRoute /> }>
+                <Route path='/payed' element={ <Payed /> } />
             </Route>
             <Route index element={ <Home /> } />
             <Route path="/category" element={ <Category /> } />

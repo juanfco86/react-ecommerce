@@ -25,10 +25,6 @@ const Register = () => {
                         lastName: e.target.lastNameRegister.value,
                         address: e.target.addressRegister.value,
                         postalCode: e.target.postalCodeRegister.value,
-                        cardNumber: e.target.cardNumber.value,
-                        cardOwner: e.target.owner.value,
-                        expDate: e.target.expirationDate.value,
-                        CVC: e.target.cvc.value,
                     }
                     
                     if (!usersData.find((elem) => elem.email === newUser.email)) {
@@ -46,13 +42,12 @@ const Register = () => {
                         setHelperRegister(true);
                         setErrorRegister(null);
                     } else {
-                        setHelperRegister(false);
+                        setHelperRegister(false)
                         setErrorRegister('Email already exists');
                     }
                 }
             });
         }
-        
     }
     
     return (
@@ -98,35 +93,7 @@ const Register = () => {
                             <input type="text" className="form-control form-double" name="postalCodeRegister" required />
                         </div>
                     </div>
-
-                    <div className='row mt-3 mb-2 col-4 text-center'>
-                        <h5 className='mb-2 mt-2 alert alert-danger'>Credit card data</h5>
-                    </div>
-
-                    <div className="row col-6">
-                        <div className="col-12">
-                            <label className="form-label">Card number</label>
-                            <input type="text" className="form-control" name="cardNumber" defaultValue="1111111111111111" required />
-                        </div>
-                    </div>
-                    <div className='row col-6'>
-                        <div className="col-12">
-                            <label className="form-label">Name of owner</label>
-                            <input type="text" className="form-control" name="owner" defaultValue="1111" required />
-                        </div>
-                    </div>
-
-                    <div className="row mb-3 d-flex align-items-center justify-content-center col-6">
-                        <div className="col-6">
-                            <label className="form-label">Expiration date</label>
-                            <input type="date" className="form-control form-double" name="expirationDate" required />
-                        </div>
-                        <div className="col-6">
-                            <label className="form-label">CVC</label>
-                            <input type="number" className="form-control form-double" name="cvc" defaultValue="111" required />
-                        </div>
-                    </div>
-
+                    
                     <button type="submit" id="btn-reg" className="btn btn-primary mt-3 mb-3">Submit</button>
                     <p className='text-center text-danger mb-3'><b>{errorRegister}</b></p>
                 </div>
@@ -148,12 +115,6 @@ const validate = (e) => {
     } else if (e.target.addressRegister.value.length < 5) {
         return false;
     } else if (e.target.postalCodeRegister.value.length !== 5) {
-        return false;
-    } else if (e.target.cardNumber.value.length !== 19 && e.target.cardNumber.value.length !== 16) {
-        return false;
-    } else if (e.target.owner.value.length < 2) {
-        return false;
-    } else if (e.target.cvc.value.length !== 3) {
         return false;
     } else {
         return true;

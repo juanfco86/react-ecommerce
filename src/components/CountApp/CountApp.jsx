@@ -32,7 +32,11 @@ const CountApp = ({ price, img, name, amount, stock, buy, setBuy, id, saveValue,
     
     // BOTON DE REDUCIR VALOR
     const decreaseAmount = (product) => {
-        decreaseValue(product);
+        if (amount === 1) {
+            deleteProduct(product.id)
+        } else {
+            decreaseValue(product);
+        }
     }
     
     // BOTON DE RESETEAR VALOR

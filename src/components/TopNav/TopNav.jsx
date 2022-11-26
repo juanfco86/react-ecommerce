@@ -7,8 +7,7 @@ import { useAuthContext } from '../../context/Auth/AuthContext'
 
 const TopNav = () => {
 
-    const { loginStatus, logout } = useAuthContext();
-    const dataFromUsers = JSON.parse(localStorage.getItem('Logged'));
+    const { loginStatus, logout, dataUser } = useAuthContext();
 
     return (
         <>
@@ -33,7 +32,7 @@ const TopNav = () => {
                         <li>
                             {
                                 !!loginStatus ? (
-                                    <Link to="/user" className="nav"><button className="btn button-6 btn-nav">{dataFromUsers.firstName} <i className="fa-solid fa-user"></i></button></Link>
+                                    <Link to="/user" className="nav"><button className="btn button-6 btn-nav">{dataUser.firstName} <i className="fa-solid fa-user"></i></button></Link>
                                 ) : ""
                             }
                         </li>

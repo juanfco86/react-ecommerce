@@ -18,7 +18,6 @@ const Rods = () => {
         localStorage.setItem('Wish', JSON.stringify(wishes));
     }, [wishes])
     
-
     useEffect(() => {
         localStorage.setItem("Result", JSON.stringify(buy));
     }, [buy])
