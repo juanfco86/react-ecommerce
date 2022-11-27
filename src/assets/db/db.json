@@ -109,21 +109,6 @@
       "CVC": "111"
     },
     {
-      "id": "0080062d-e6c7-4135-b1ca-6e206c05950d",
-      "email": "juan@gmail.com",
-      "password": "$2a$10$6rNHQXe1hQGEpkP5uvXBs.8/MVXWT5LYxlWlZmIOTblFu9UU3B0de",
-      "firstName": "Juan Francisco",
-      "lastName": "Solano Pérez",
-      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
-      "postalCode": "29640",
-      "cardNumber": "1234123412341234",
-      "cardOwner": "123",
-      "expDate": "22",
-      "CVC": "123",
-      "expDateMonth": "01",
-      "expDateYear": "22"
-    },
-    {
       "id": "a680d7ee-ddfc-43dc-966e-06d9664e1206",
       "email": "esther@gmail.com",
       "password": "$2a$10$msOHuN5l0rVUqPVCe69mauXiIZ.belZjdvFQ1ZED59PUZvrgHXD6C",
@@ -182,7 +167,7 @@
       "id": "8f7e3c2a-8b99-49b6-bc2b-a8a0efb2b64a",
       "email": "juanfco86@gmail.com",
       "password": "$2a$10$hpHfBDqIWH.svjopF45QKOrnxqa9Jy3vLNiX36cMzW/c7TZOylPaq",
-      "firstName": "Juan Francisco",
+      "firstName": "Juan",
       "lastName": "Solano Pérez",
       "address": "Calle Maestra Ángeles Azpiazu",
       "postalCode": "29640"
@@ -246,6 +231,559 @@
       "expDateMonth": "01",
       "expDateYear": "22",
       "CVC": "123"
+    },
+    {
+      "id": "3b15b510-b8d8-4a66-a28c-9b37930c35ad",
+      "email": "lidia12@gmail.com",
+      "password": "$2a$10$wVZps.L6WnvYH9sijIRj8u5nmMc.d8xkDIIphR0YASzNlKap8pnzG",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "05cb86e5-04be-40e8-8d1e-dfc2baa8172a",
+      "email": "juanini@gmail.com",
+      "password": "$2a$10$Qvh04lWGZU0yIVpY9cP1Au7GcY1LOXhJRv5/2OLmp5jm.H.S3uWgC",
+      "firstName": "Juan",
+      "lastName": "Nini",
+      "address": "C nini",
+      "postalCode": "12345"
+    },
+    {
+      "id": "300bae98-0f18-4159-b966-5216fa7df592",
+      "email": "juanfco86@gmail.com321",
+      "password": "$2a$10$bwRYvSxXupUoG4w5PKF0IuO.Y37TVgTdzli1JIA4EeyOcM3DeJTmq",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "248dc91a-129c-4e9e-a02f-7c4f2cc86786",
+      "email": "juanfco86@gmail.com3211",
+      "password": "$2a$10$3cSF6noIFKvmYE.C4fMOFeAVZHzhFXUBynozp7ocWm3hsAtMkn6k.",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "83a15949-6ca1-4256-9cfa-48b65dc23a87",
+      "email": "juanfco86@gmail.com32111",
+      "password": "$2a$10$hJCnVnunhvXNPBQpsMwjqu9GAAvcBZj2knbyDJmGhzROj2mdo.3Jm",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "df46c047-937f-4452-86d6-5bdc95cdbca6",
+      "email": "juanfc@gmail.com",
+      "password": "$2a$10$UDYf/paHh2HAho4E1dGQFOiaNOl/UQ7WNTsYmzS5w4VYWhBaeoQ4m",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "897ab2fc-25c0-4e3d-8cab-0569ad4d4a58",
+      "email": "juanfc1@gmail.com",
+      "password": "$2a$10$yq6AtEDKPEAYbXIPftlqYexLIzK4kZ0WXtVmx0nmLWJhMTvZrOrKy",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "4d38a519-b522-431a-8209-a3dc9195e615",
+      "email": "juanfco86@gmail.comzxc",
+      "password": "$2a$10$mwYASS0nk.1LR8VOoKoUMuvgRgI0izcVtm4r1WtP8Nw1TgwpBsR2i",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "c520e324-370a-4d17-9b81-6cfb8f1504cf",
+      "email": "culo@culo.com",
+      "password": "$2a$10$9.zI0iOh3j8mABWZ6uxCAevbO5TcLD8KKmBZo.Binlntvl7b48ZH.",
+      "firstName": "Culo",
+      "lastName": "Culito",
+      "address": "12345",
+      "postalCode": "12345"
+    },
+    {
+      "id": "8c91177e-fd6b-43a0-9582-7b7cb2b852bf",
+      "email": "tetitas@tetitas",
+      "password": "$2a$10$s0rhZIRBVkIoaEAQbmWRNOZZODUdiU8AxI0tJEl3B8dH9Dx30UuSC",
+      "firstName": "1234",
+      "lastName": "1234",
+      "address": "123415",
+      "postalCode": "12345"
+    },
+    {
+      "id": "a5bd38f7-c08c-4669-83c5-5ddb35b9e276",
+      "email": "1234@1234",
+      "password": "$2a$10$ndrp3zsW4aSdRX8.cJZ2AetBk7qUmkvha04ZUwCz1Nc.ITORDiDxy",
+      "firstName": "1234",
+      "lastName": "1234",
+      "address": "12345",
+      "postalCode": "12345"
+    },
+    {
+      "id": "cba40f98-20c4-4f8c-be5f-66cfcef0afab",
+      "email": "culofinal@final",
+      "password": "$2a$10$.EU.02jV.aZdGlbC41z0FumGKUTPqRYMkXoFx901Y/BZEJDxXKUZa",
+      "firstName": "final",
+      "lastName": "final",
+      "address": "final123",
+      "postalCode": "12345"
+    },
+    {
+      "id": "d3173bfd-a81c-4ca6-864d-7928a88279ea",
+      "email": "juanfco86@gmail.com1234",
+      "password": "$2a$10$BrZAx2SSdD0QfGJKgR1IouUoW0dULchugLQoZElI4L2710b5U.qZ2",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "69fb164d-fe6f-4c9c-9f1a-f2279ed7362f",
+      "email": "juanfco86@gmail.com12345",
+      "password": "$2a$10$YLYIBEMaIlGXeA4OmsAN5ulA/GFL8OzBvi8CrDi0.SvoPO79isa32",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "4bbf555a-d36f-438c-bd49-30ca460e2297",
+      "email": "juanfco86@gmail.com123456",
+      "password": "$2a$10$Kp39k.7Ww8GhHH.Wngq2VeQnrOO250v.X9mSMtrObgKFzzyfCsmQK",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "e1caeb51-3eb7-4063-b1aa-ebc67f1d3392",
+      "email": "juanfco86@gmail.com21",
+      "password": "$2a$10$tm.7nOZmiL2kENcr16MvzOkCcT6L24XMhjBmxW9bcVyNrC/iur/XG",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "4a51283e-cf66-490e-af34-9379571bf72e",
+      "email": "juanfco86@gmail.com11211",
+      "password": "$2a$10$eQcBLKD0J23YtDknDm26fe89/zgZwKIOB5PpH5ATPpT8hg8ZjedUW",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "a922a2b7-3578-4180-a30b-8b9aca3699f1",
+      "email": "juanfco86@gmail.com22122",
+      "password": "$2a$10$Rtc6nNKlOa/5x5h6GFlnQuDPF6pyGEPHmU1FgG00ADJRA4GW/Lvsi",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "4324da2c-50e4-4ce9-a69f-fe37d7bfcbb7",
+      "email": "juanfco86@gmail.com12341234",
+      "password": "$2a$10$oLz0vBzUiLMyoXmaTdUdweHrU8Qj1OcvyTAZDcxSgRliq96iumolW",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "e74542aa-068b-436d-a94d-f9d947ffe4c1",
+      "email": "juanfco86@gmail.com321321",
+      "password": "$2a$10$IMhmwSBqhv021K6HM8YvV.YP8cBXf.j7IN58Za.jBuhPfI0l1Bv0C",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "8e1d1c1a-e97f-4405-8d17-01908854bfb2",
+      "email": "juanfco86@gmail.c",
+      "password": "$2a$10$Rbk7sEAFp0USb9HpxLBYPeV/wV8ZyFYmko4c75ifibrJSF/VK08zK",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "71d91d3f-5272-41b1-976e-d737cc73d283",
+      "email": "juanfco86@gmail",
+      "password": "$2a$10$cgN5cE44Q03M8ySWrs2OpOjtgBpPZ.mbGBLyqgICOfgJSfvcN6aJi",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "cdd72811-fba3-44cb-b7cf-b259d2ca75da",
+      "email": "pesquero@pesquero",
+      "password": "$2a$10$Pm9cwy.lShHBbA.4f5mt3.n4gpPsY2rd4URBl8nBtAegD9LA3Pnce",
+      "firstName": "1234",
+      "lastName": "1234",
+      "address": "12334",
+      "postalCode": "23451"
+    },
+    {
+      "id": "238f408a-3b28-45d9-9e46-be1bc569fa68",
+      "email": "ana@ana",
+      "password": "$2a$10$kw65PezdHQxfhdRwiAFcSeOTAJull5WgVzGhm5q7vM13QEqsVgVKi",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "c044006e-4eed-44dc-bfdb-ba557309248f",
+      "email": "juanfco86@gmail.co",
+      "password": "$2a$10$EMOcOO8hDBLRWAxS4h35iOcJlI9dEo4q1wSNUITtH6gMgscPmrEUi",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "58633793-c4ca-4166-a372-638138760448",
+      "email": "juanfco86@g",
+      "password": "$2a$10$z2L7uWZ11b3iVWRfaIMMa.EKbNUbTiomUl5zxkKwj8ujickFsJQtm",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "b77b88e1-6ed1-4570-8f69-309b4dd3bae4",
+      "email": "juanfco86@gmail.com54321",
+      "password": "$2a$10$V9zKfXcuyICJK1BM9cVF8.qrP0a273rlQ0G2bXul75M0TJfwpZXqC",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "75987467-6256-4c0e-81e4-f313c45814f8",
+      "email": "juanfco86@gmail.comxxx",
+      "password": "$2a$10$etsUp7QQmlNK/HTMmhRVrOpii6NpNkAoDxizNxJgkX7AwJjvoxmrK",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "1143389c-6d1d-4c87-b3c2-23eb1ec1d2b4",
+      "email": "juanfco86@gmail.comqwe",
+      "password": "$2a$10$ICExQ06LSAH/tCEEmXld2.uNXYMQTxlI.5b376lXOcMrquolyB1J6",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "f0526cd8-dbb0-4653-a033-2247195e0061",
+      "email": "juanfco86@gmail.comxx",
+      "password": "$2a$10$A4sHV7VE5OLXqbp/C/sKEOPe5cJfLF67bOEXDrLKMSDui12ZIZAO6",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "fbd856b8-bb6e-4f2f-b94d-940632bc0f67",
+      "email": "juanfco86@gmail.comxxxx",
+      "password": "$2a$10$xTxemA1NYn4f42kc5kFf5eFlmLfz3cJgETdWiSdj3lmglXtAGg8gG",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "18dccd14-12ea-497c-b4cf-90d68351eac7",
+      "email": "juanfco86@gmail.comxxxxxxxxxxx",
+      "password": "$2a$10$4BhH8jq.8SO5Vfj6Y/QOmep.GD2D5zR6CeEmOcjPE.jXT9qZ0MItS",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "8f7db936-00af-4090-a8f5-4621f8fbb73f",
+      "email": "juanfco86@gmail.com123412341234",
+      "password": "$2a$10$nCeSWTOwb5XJhlBKYYwj3eBo13PECSmt9pX9wvIRvmDOe4lilkX/2",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "3b740574-5e09-471e-8f6b-60d07549ef1b",
+      "email": "juanfco86@gmail.comxxa",
+      "password": "$2a$10$JHSpWRw9H2HJmHYnClAWKeMWtsJkYZ2L40Gk1I.Hlb4ZR6Q8vG136",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "777c9dd2-b8ee-495b-abbd-66c38b122381",
+      "email": "juanfco86@gm",
+      "password": "$2a$10$90SdpzmqMdqWg0x0MrcNV.WVfa4pumfsGZL/Cw6/uUVFHpUyLjT3a",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "0d6f9347-4902-41cc-854d-9b2247ace325",
+      "email": "juanfco86@gmail.com113",
+      "password": "$2a$10$zuPAMLwZKjOZ6xWpea.TrOpJA5sFyClNw5QE1GsqwkkBh7xvQnO8.",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "45a99d05-7b0e-4fab-b2ce-feb15af5b72a",
+      "email": "ana1@ana",
+      "password": "$2a$10$ajD/sIR/aFvVCIN2cqNSoO.BTc1T1ElRrLU5983gCcu7k0aSFnyeu",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "b38c383b-268c-401d-b481-88d6a417a694",
+      "email": "juanfco86@gma",
+      "password": "$2a$10$ztK.vVjaocWkY.iho8Bn5.x3X8FmQSAX1qqP0cBu8dsKP5iQWouzO",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "ceaaaba5-a2d1-4dd2-9ca1-b2ea8be0e9f5",
+      "email": "esther3@gmail.com",
+      "password": "$2a$10$3fKsopy4R7/HSJnIiBX4XOHTTPT7S6iSQcgbEgOvhS54sVxhne.oG",
+      "firstName": "1234",
+      "lastName": "1234",
+      "address": "1234123",
+      "postalCode": "12345"
+    }
+  ],
+  "orders": [
+    {
+      "id": "d5b22f86-5a5e-4a08-90af-791ce0f88d36",
+      "idUser": "0080062d-e6c7-4135-b1ca-6e206c05950d",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "123",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        }
+      ]
+    },
+    {
+      "id": "4ee7ffa9-f24b-4e8e-97d8-a46c8f435dab",
+      "idUser": "3b15b510-b8d8-4a66-a28c-9b37930c35ad",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "1234",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        }
+      ]
+    },
+    {
+      "id": "55af7957-5f78-4695-b20d-9118a067ca86",
+      "idUser": "3b15b510-b8d8-4a66-a28c-9b37930c35ad",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "123",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        },
+        {
+          "id": 2,
+          "name": "VERCELLI ENYGMA HELIO 4.20M 3TR",
+          "price": 199,
+          "stock": 5,
+          "img": "02",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Super precio en una caña de pesca surfcasting que no hace honor a su nombre. De clásica no tiene nada la Vercelli Enygma Clasica. El carbono y los componentes son de última generación. Caña surfcasting fabricada en Hi-Modulus Carbon monta anillas Fuji Low Rider y porta carretes Fuji DPS de rosca con almohadilla. Caña con puntero tubular Power Tip Section y potente acción 100-250 gramos concebida para escupir metros y metros y alcanzar largas distancias. Por poca pasta tienes una caña de primera marca, equipada a tope y con unos acabados esmerados."
+        },
+        {
+          "id": 6,
+          "name": "SHIMANO SOARE BB A C2000SS PG",
+          "price": 169.6,
+          "stock": 5,
+          "img": "06",
+          "amount": 1,
+          "category": "Reel",
+          "description": "El Soare BB C2000PGS es un carrete del catálogo Shimano JDM (Japonés). Es un pequeño pero ligero carrete muy llamativo a la vista. El carrete tiene muchas características como su resistente engranaje (HAGANE) y su protección contra la instrucción de agua en el cuerpo (Coreprotect). Lo que es único en este carrete, es el muy bajo ratio (4.3:1) y muy lenta recogida (57 cm por vuelta).Este carrete es muy apropiado para técnicas de pesca donde se utilizan cañas ligeras o ultra ligeras. Debido a su bajo ratio ratio, tiene una poderosa y lenta recogida. Esta lenta recogida es muy beneficiosa para ciertas técnicas de pesca donde esta lentitud es clave para atrapar la mayoría de las presas. Por ejemplo: Pesca en zonas de trucha."
+        },
+        {
+          "id": 5,
+          "name": "HART FINN 30",
+          "price": 145,
+          "stock": 1,
+          "img": "05",
+          "amount": 1,
+          "category": "Reel",
+          "description": "Precisión y potencia en la pesca a curricán. Carrete de cacea con cuerpo y tapas laterales fabricadas en grafito de alta resistencia, reforzado con piezas de cierre en aluminio. Tecnología de 6 rodamientos de acero inoxidable. Freno micro-ajustable de leva multi-posición con discos de carbono y acero que incrementan la precisión y seguridad de frenado. Piñón de acero inoxidable. Potente manivela de acero inoxidable con pomo de caucho sobredimensionado. Bobina de aluminio. Pulsador de carraca. Terminales de enganche al arnés en acero inoxidable. Incluye abrazadera y tornillería de ajuste al portacarrete."
+        }
+      ]
+    },
+    {
+      "id": "c5332a65-5dbe-4c0c-b979-d500d6c62b65",
+      "idUser": "3b15b510-b8d8-4a66-a28c-9b37930c35ad",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "123",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 4,
+          "name": "VERCELLI OXYGEN ZK - 7+1BB",
+          "price": 89,
+          "stock": 7,
+          "img": "04",
+          "amount": 1,
+          "category": "Reel",
+          "description": "Completo y a buen precio se ofrece el Vercelli Oxygen ZK. Ideal para pescadores que buscan un buen carrete a precio contenido para surfcasting. Fabricado en material ultra ligero, el Oxygen ZK tiene mecánica a base de 6 rodamientos a bolas, freno micro ajustable Fast Drag con 14 Kilos de potencia, cierre de pick-up automático, guía hilos sobredimensionado, manivela de aluminio y pomo engomado. Se entrega con bobina extra de grafito capacidad 345 metros de nylón 0.35 mm."
+        },
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        }
+      ]
+    },
+    {
+      "id": "5318da93-734d-42f3-8be6-bcb5a8eb78c2",
+      "idUser": "3b15b510-b8d8-4a66-a28c-9b37930c35ad",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "123",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        }
+      ]
+    },
+    {
+      "id": "7fa4db9f-1f7d-4d02-8e99-77cf953db379",
+      "idUser": "8f7db936-00af-4090-a8f5-4621f8fbb73f",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "1234",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "121",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        },
+        {
+          "id": 2,
+          "name": "VERCELLI ENYGMA HELIO 4.20M 3TR",
+          "price": 199,
+          "stock": 5,
+          "img": "02",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Super precio en una caña de pesca surfcasting que no hace honor a su nombre. De clásica no tiene nada la Vercelli Enygma Clasica. El carbono y los componentes son de última generación. Caña surfcasting fabricada en Hi-Modulus Carbon monta anillas Fuji Low Rider y porta carretes Fuji DPS de rosca con almohadilla. Caña con puntero tubular Power Tip Section y potente acción 100-250 gramos concebida para escupir metros y metros y alcanzar largas distancias. Por poca pasta tienes una caña de primera marca, equipada a tope y con unos acabados esmerados."
+        }
+      ]
     }
   ]
 }

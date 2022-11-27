@@ -19,20 +19,20 @@ const AuthProvider = ({ children }) => {
     const urlUsers = "http://localhost:3000/users";
 
     // Pasar a CONTEXT los fetch --> setUsetData y setProduct
-    const fetchDataUsers = async () => {
+    const fetchDataUsers = useCallback(async () => {
         try {
             const response = await fetch(urlUsers);
-            const dataUsers = await response.json();
-            setUsersData(dataUsers);
+            const data = await response.json();
+            //fetchDataUsers();
+            setUsersData(data);
         } catch {
             console.log("Error");
         }
-    }
-
+    }, [])
+    
     const login = useCallback(function(email, password) {
         usersData.find((elem) => {
             if (elem.email === email) {
-                console.log(elem);
                 bcrypt.compare(password, elem.password, (err, coincide) => {
                     if (err) {
                         return console.log('Error:', err);
@@ -40,6 +40,7 @@ const AuthProvider = ({ children }) => {
                         // SI LA CONTRASEÑA ES IGUAL HACE ESTO
                         sessionStorage.setItem('Logged', true);
                         localStorage.setItem('Logged', JSON.stringify(elem));
+                        fetchDataUsers();
                         return setLoginStatus(true);
                     } else {
                         return setErrorMessage('Password incorrect')
@@ -50,18 +51,21 @@ const AuthProvider = ({ children }) => {
             }
             return '';
         });
-    }, [bcrypt, usersData])
-
+    }, [bcrypt, usersData, fetchDataUsers])
+    
     const logout = useCallback(function() {
         sessionStorage.removeItem('Logged');
         localStorage.removeItem('Logged');
         setLoginStatus(false);
     }, [])
-    
+
     useEffect(() => {
         fetchDataUsers();
+    }, [fetchDataUsers])
+
+    useEffect(() => {
         setDataUser(JSON.parse(localStorage.getItem('Logged')));
-    }, [usersData])
+    }, [fetchDataUsers, usersData])
 
     const value = useMemo(() => ({
             login,
@@ -79,9 +83,10 @@ const AuthProvider = ({ children }) => {
             helperRegister,
             setHelperRegister,
             dataUser,
-            setDataUser
+            setDataUser,
+            fetchDataUsers
         }),
-        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData, dataUser]
+        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData, dataUser, fetchDataUsers]
     );
 
 

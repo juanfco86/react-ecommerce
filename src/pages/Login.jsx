@@ -4,7 +4,7 @@ import { useAuthContext } from '../context/Auth/AuthContext'
 const Login = () => {
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
     const { login, errorMessage, email, setEmail, password, setPassword } = useAuthContext();
-    
+
     // Si el mensaje de error esta vacio, devuelve validate con los errores que tenga el usuario
     const errorAux = () => {
         if(errorMessage === '') {

@@ -8,6 +8,8 @@ import * as photos from '../assets/img'
 const Payed = () => {
     const { dataUser } = useAuthContext();
     const { buy, setBuy } = useContext(MainContext);
+
+    // PROVISIONAL
     const restartCart = () => {
         setBuy([]);
     }
@@ -29,7 +31,6 @@ const Payed = () => {
                 })
             }
             <p className="alert alert-success mt-3">You order will arrive in the next few days</p>
-
             <div className="col mb-3">
                 <Link to={'/'} className="withoutStyle"><button className="btn button-6 m-2" onClick={restartCart}>Go home</button></Link>
                 <button className="btn button-6 m-2">Orders</button>

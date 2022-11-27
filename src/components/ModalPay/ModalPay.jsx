@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import { MainContext } from '../../context/Main/MainContext';
 
 const ModalPay = () => {
 
+    const { buy } = useContext(MainContext);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -15,8 +18,9 @@ const ModalPay = () => {
         e.preventDefault();
 
         if (validateShipping(e) === true) {
-            const user = {
-                ...findUser,
+            const order = {
+                id: uuidv4(),
+                idUser: findUser.id,
                 firstName: e.target.firstNameShipping.value,
                 lastName: e.target.lastNameShipping.value,
                 address: e.target.addressShipping.value,
@@ -25,18 +29,19 @@ const ModalPay = () => {
                 cardOwner: e.target.owner.value,
                 expDateMonth: e.target.expirationDateMonth.value,
                 expDateYear: e.target.expirationDateYear.value,
-                CVC: e.target.cvc.value
+                CVC: e.target.cvc.value,
+                products: buy
             }
             
-            fetch(`http://localhost:3000/users/${findUser.id}`, {
-                method: 'PUT',
+            fetch(`http://localhost:3000/orders`, {
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(user)
+                body: JSON.stringify(order)
             })
             .then(res => res.json())
-            .then(rest => localStorage.setItem('Logged', JSON.stringify(rest)))
+            .then((res) => console.log(res))
             .then(navigate('/payed'))
             .catch(e => console.log(e));
         }

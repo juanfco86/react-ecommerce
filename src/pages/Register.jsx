@@ -1,11 +1,16 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/Auth/AuthContext';
+import { useEffect } from 'react';
 
 const Register = () => {
     const bcrypt = require("bcryptjs");
     const navigate = useNavigate();  
-    const { setHelperRegister, usersData, errorRegister, setErrorRegister } = useAuthContext();
+    const { setHelperRegister, usersData, errorRegister, setErrorRegister, fetchDataUsers } = useAuthContext();
+
+    useEffect(() => {
+        fetchDataUsers();
+    }, [usersData])
     
     const register = (e) => {
         e.preventDefault();
@@ -36,6 +41,7 @@ const Register = () => {
                             body: JSON.stringify(newUser)
                         })
                         .then(res => res.json())
+                        .then(() => fetchDataUsers())
                         .then(navigate('/login'))
                         .catch(error => console.log(error))
                         
@@ -50,6 +56,7 @@ const Register = () => {
         }
     }
     
+
     return (
         <>
             <form onSubmit={(e) => {
