@@ -4,7 +4,6 @@ import { useAuthContext } from '../context/Auth/AuthContext';
 
 const Register = () => {
     const bcrypt = require("bcryptjs");
-    const navigate = useNavigate();  
     const { setHelperRegister, usersData, errorRegister, setErrorRegister, fetchDataUsers, setLoginStatus } = useAuthContext();
     
     const register = (e) => {
@@ -16,7 +15,6 @@ const Register = () => {
                 if (err) {
                     console.log("Error hash:", err);
                 } else {
-                    
                     const newUser = {
                         id: uuidv4(),
                         email: e.target.emailRegister.value,

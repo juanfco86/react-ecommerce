@@ -68,9 +68,212 @@
       "cardOwner": "123",
       "expDate": "2022-12-11",
       "CVC": "111"
+    },
+    {
+      "id": "cd16fc7d-a4da-4cfb-be95-ccc101dd8f97",
+      "email": "juan@gmail.com",
+      "password": "$2a$10$6Rge3XCRaOkcFagQ3WFHP.d5Vd6dogcd7R6N7v6QSBoJ00Gv/UxBy",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640"
+    },
+    {
+      "id": "70e10921-72d2-467a-b558-baeee6e9f9ae",
+      "email": "juanfco86@gmail.com",
+      "password": "$2a$10$V3WNkF4FJPU3kKxIl0Kd3OboZcdxxkrxmjZn8wurx3zLPxgxLyLzS",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "123c0aed-4cc6-47b1-8520-f390971aab9e",
+      "email": "juan12@gmail.com",
+      "password": "$2a$10$r6ccTdEYqb5PR.Kawy/kdu4hqYdOgM2ENtIcV8hHiHkE8JpitGI1a",
+      "firstName": "juan",
+      "lastName": "juan",
+      "address": "calle juan",
+      "postalCode": "12345"
+    },
+    {
+      "id": "17c97600-0d6c-4325-b544-727f758dce87",
+      "email": "juanfco86@gmail.com12",
+      "password": "$2a$10$n.KiE1Wb2hUTDNy5op8nseuVcvqphpuVKIQHWFcb1xi6kWhJ/FqVy",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "a80b66d9-3abe-4aa5-8ad5-54303f56c403",
+      "email": "juanfco86@gmail.com123",
+      "password": "$2a$10$TRr3KlafLR4mbdRWFbdTaOcqqBvpGBi/zd8kjEBOm1UNteMW8elIS",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "10e6ff18-68c6-424d-acc1-0cf64464f621",
+      "email": "juanfco86@gmail.comxxx",
+      "password": "$2a$10$RKHcpK5bgjxoxbZ/5VxWoOk1T8HwXpWsZ70Nmc/fn9covmeZcsuRC",
+      "firstName": "Juan Franc",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "9a6b2cb7-985b-4899-8419-504aff2c02ce",
+      "email": "juan13@gmail.com",
+      "password": "$2a$10$PXU7tJPgYhsht7K96qX2pe/2RFx5yglFzbXQfiBptKN4KFoXh4ZC6",
+      "firstName": "Juan Francisco",
+      "lastName": "juan",
+      "address": "calle juan",
+      "postalCode": "12345"
+    },
+    {
+      "id": "07e528ad-e86b-490a-af10-c200e30b1ab7",
+      "email": "juanfco86@gmail.comxx",
+      "password": "$2a$10$o0Q4AZlHnM9JrW/tJFTWheJrGUjJRHxe4KlfHWiUn/aKulj96L/kq",
+      "firstName": "Juan",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "37a1d5d4-8a5b-4d2f-8d10-9ee7aac3f1e5",
+      "email": "juanfco86@gmail.comxxxx",
+      "password": "$2a$10$5hisPFZCZ8bklTy0X0osJ.YMkifxmAmyNuXOahNeJMqEvV9clVNjq",
+      "firstName": "Juan",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "486c0a12-518b-4c32-bd2e-0acfe3728408",
+      "email": "juanfco86@gmail.comxxxxx",
+      "password": "$2a$10$5nUz6y1gMYMFWx3zGiz0zubNhuvZAvvrUO8e8q9GDStNTV7CpkN3K",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
+    },
+    {
+      "id": "fe59b705-5808-4010-a05d-72d2127e2677",
+      "email": "juanfco86@gmail.com321",
+      "password": "$2a$10$ND5W0RLnV2Slo2WzCmKz1ux.dgQ3pFtKjVJRrmesKapGwdN3fdIAu",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu",
+      "postalCode": "29640"
     }
   ],
   "orders": [
-    
+    {
+      "id": "32e1d2b3-d2ff-4fd9-81d4-b89e68f5337f",
+      "idUser": "cd16fc7d-a4da-4cfb-be95-ccc101dd8f97",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "1234",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 3,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        },
+        {
+          "id": 4,
+          "name": "VERCELLI OXYGEN ZK - 7+1BB",
+          "price": 89,
+          "stock": 7,
+          "img": "04",
+          "amount": 1,
+          "category": "Reel",
+          "description": "Completo y a buen precio se ofrece el Vercelli Oxygen ZK. Ideal para pescadores que buscan un buen carrete a precio contenido para surfcasting. Fabricado en material ultra ligero, el Oxygen ZK tiene mecánica a base de 6 rodamientos a bolas, freno micro ajustable Fast Drag con 14 Kilos de potencia, cierre de pick-up automático, guía hilos sobredimensionado, manivela de aluminio y pomo engomado. Se entrega con bobina extra de grafito capacidad 345 metros de nylón 0.35 mm."
+        }
+      ]
+    },
+    {
+      "id": "d92f53df-8f00-4530-93d7-24e531f5faab",
+      "idUser": "9a6b2cb7-985b-4899-8419-504aff2c02ce",
+      "firstName": "Juan Francisco",
+      "lastName": "juan",
+      "address": "calle juan",
+      "postalCode": "12345",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "Juan",
+      "expDateMonth": "05",
+      "expDateYear": "25",
+      "CVC": "111",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 3,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        },
+        {
+          "id": 2,
+          "name": "VERCELLI ENYGMA HELIO 4.20M 3TR",
+          "price": 199,
+          "stock": 5,
+          "img": "02",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Super precio en una caña de pesca surfcasting que no hace honor a su nombre. De clásica no tiene nada la Vercelli Enygma Clasica. El carbono y los componentes son de última generación. Caña surfcasting fabricada en Hi-Modulus Carbon monta anillas Fuji Low Rider y porta carretes Fuji DPS de rosca con almohadilla. Caña con puntero tubular Power Tip Section y potente acción 100-250 gramos concebida para escupir metros y metros y alcanzar largas distancias. Por poca pasta tienes una caña de primera marca, equipada a tope y con unos acabados esmerados."
+        }
+      ]
+    },
+    {
+      "id": "d7a676c8-0ce9-4586-870d-13942478accc",
+      "idUser": "cd16fc7d-a4da-4cfb-be95-ccc101dd8f97",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano Pérez",
+      "address": "Calle Maestra Ángeles Azpiazu, N14 P2 2B",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "1234",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 3,
+          "name": "SHIMANO YASEI BB PIKE SPINNING",
+          "price": 30,
+          "stock": 1,
+          "img": "03",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Para los pescadores fanáticos del lucio, presentamos una nueva gama de cañas de lucio. La Yasei Pike 210H es una caña de spinning que combina con todo tipo de señuelos para aguas y canales pequeños a medianos, con crankbaits, spinnerbaits, softbait streamers, swimbaits o pequeños jerkbaits de hasta 60g, todo es posible con esta todoterreno. Con una longitud de 210cm, tendrás suficiente longitud para lanzar lo suficiente pero aún será flexible cuando quieras pescar debajo de los puentes o cerca de las estructuras. La acción de la caña rápida en combinación con el blank receptivo te asegurará el clavado adecuado que se necesita para pescar lucios. La Yasei Pike 250XH Spinning es una caña más larga que puede manejar señuelos más pesados de hasta 100 g. ¿Es una gran caña de spinning integral que le da un poco más de longitud, lo que resulta en lanzados más largos, que puede ser muy útil cuando se pesca en grandes lagos o en un río. Además, la longitud adicional puede ser muy útil cuando quieres pescar en agua con mucha cobertura, para poder pescar sobre ella."
+        },
+        {
+          "id": 6,
+          "name": "SHIMANO SOARE BB A C2000SS PG",
+          "price": 169.6,
+          "stock": 5,
+          "img": "06",
+          "amount": 1,
+          "category": "Reel",
+          "description": "El Soare BB C2000PGS es un carrete del catálogo Shimano JDM (Japonés). Es un pequeño pero ligero carrete muy llamativo a la vista. El carrete tiene muchas características como su resistente engranaje (HAGANE) y su protección contra la instrucción de agua en el cuerpo (Coreprotect). Lo que es único en este carrete, es el muy bajo ratio (4.3:1) y muy lenta recogida (57 cm por vuelta).Este carrete es muy apropiado para técnicas de pesca donde se utilizan cañas ligeras o ultra ligeras. Debido a su bajo ratio ratio, tiene una poderosa y lenta recogida. Esta lenta recogida es muy beneficiosa para ciertas técnicas de pesca donde esta lentitud es clave para atrapar la mayoría de las presas. Por ejemplo: Pesca en zonas de trucha."
+        }
+      ]
+    }
   ]
 }

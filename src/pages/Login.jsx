@@ -5,6 +5,7 @@ const Login = () => {
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
     const { errorMessage, email, setEmail, password, setPassword, usersData, fetchDataUsers, setLoginStatus } = useAuthContext();
     const bcrypt = require("bcryptjs");
+
     // Si el mensaje de error esta vacio, devuelve validate con los errores que tenga el usuario
     const errorAux = () => {
         if(errorMessage === '') {

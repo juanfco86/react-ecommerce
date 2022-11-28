@@ -41,7 +41,6 @@ const AuthProvider = ({ children }) => {
     }, [fetchDataUsers, usersData, logout])
 
     const value = useMemo(() => ({
-            //login,
             logout,
             loginStatus,
             setLoginStatus,

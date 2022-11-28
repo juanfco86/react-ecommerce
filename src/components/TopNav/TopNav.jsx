@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap'
 
 const TopNav = () => {
     const { loginStatus, logout, getUser } = useAuthContext();
+    let user = JSON.parse(localStorage.getItem(`Logged`));
 
     return (
         <>
@@ -33,7 +34,7 @@ const TopNav = () => {
                         <li>
                             {
                                 !!loginStatus ? (
-                                    <Link to="/user" className="nav"><Button variant="danger" className="btn button-6 btn-nav">{getUser.firstName} <i className="fa-solid fa-user"></i></Button></Link>
+                                    <Link to="/user" className="nav"><Button variant="danger" className="btn button-6 btn-nav">{user.firstName} <i className="fa-solid fa-user"></i></Button></Link>
                                 ) : ""
                             }
                         </li>
