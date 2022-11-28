@@ -6,7 +6,7 @@ import './PhotoCard.css'
 import toast from 'react-hot-toast';
 import Accordion from 'react-bootstrap/Accordion';
 
-const PhotoCard = ( { id, name, price, stock, saveValue, img, category, description, amount, addWish, deleteWish } ) => {
+const PhotoCard = ({ id, name, price, stock, saveValue, img, category, description, amount, addWish, deleteWish }) => {
   
   const product = {
     id: id,
@@ -94,7 +94,7 @@ const PhotoCard = ( { id, name, price, stock, saveValue, img, category, descript
                           </div>
                         </div>
                         
-                        <button onClick={ () => saveValue(product) } className="button-6 btn-buy">Buy <i className="fa-solid fa-cart-plus"></i></button>
+                        <button onClick={ () => saveValue(product) } className="button-7 btn-buy">Buy <i className="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </div>
                 <div className='mb-2 mt-2'>

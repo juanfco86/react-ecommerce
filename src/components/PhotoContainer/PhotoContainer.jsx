@@ -23,13 +23,13 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
   
     return (
         <>  
-            <div>
+            <div className="container">
                 <div className="searchbar-div mb-3">
                     <input className="searchbar" type="text" name="filter" value={ query } autoComplete="off" placeholder="Search product" onChange={ handleInput } />
                 </div>
 
                 <div className="photo-container">
-                    <div className="row photo-row">
+                    <div className="photo-row">
                         {
                           products && products.filter((card) => {
                             if (!query) return true;

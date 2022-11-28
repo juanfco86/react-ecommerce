@@ -1,71 +1,43 @@
-import { useEffect, useState } from 'react';
 import ModalEdit from '../components/ModalEdit/ModalEdit';
+import ModalOrders from '../components/ModalOrders/ModalOrders';
 import { useAuthContext } from '../context/Auth/AuthContext';
 
 const User = () => {
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
-    //const { findUser } = useAuthContext();
-    const url = "http://localhost:3000/orders";
-    const [orders, setOrders] = useState([]);
-    const findUser = JSON.parse(localStorage.getItem('Logged'));
-    const myOrders = orders.filter((e) => e.idUser === findUser.id);
-
-    useEffect(() => {
-        fetchOrders();
-    }, [])
-
-    // COGE LA INFORMACION DEL SERVIDOR
-    const fetchOrders = async () => {
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            setOrders(data);
-        } catch {
-            console.log("Error");
-        }
-    }
+    const { getUser } = useAuthContext();
 
     return (
         <>  
             <div className="d-flex flex-column align-items-center justify-content-center">
-                <h5 className="mt-3 mb-3 alert alert-danger">Welcome back, {findUser.firstName}</h5>
-                <div className="d-flex flex-column align-items-flex-end justify-content-center p-3">
-                    <h6 className="mt-3">User information</h6>
-                    <p>{findUser.firstName} {findUser.lastName}</p>
-
-                    <h6 className="mt-3">Contact email</h6>
-                    <p>{findUser.email}</p>
-
-                    <h6 className="mt-3">Shipping address</h6>
-                    <p>{findUser.address}</p>
-
-                    <h6>Postal code</h6>
-                    <p>{findUser.postalCode}</p>
+                <h5 className="mt-3 mb-3 alert alert-danger">Welcome back, {getUser.firstName}</h5>
+                <div className="d-flex flex-column align-items-flex-end justify-content-center p-3 style-user-container mb-3">
+                    <div className="row style-user">
+                        <h5 className="mt-2">User information</h5>
+                    </div>
+                        <p className='text-center'><b>{getUser.firstName} {getUser.lastName}</b></p>
+                    <div className="row style-user">
+                        <h5 className="mt-2">Contact email</h5>
+                    </div>
+                        <p className='text-center'><b>{getUser.email}</b></p>
+                    <div className="row style-user">
+                        <h5 className="mt-2">Shipping address</h5>
+                    </div>
+                        <p className='text-center'><b>{getUser.address}</b></p>
+                    <div className="row style-user">
+                        <h5 className='mt-2'>Postal code</h5>
+                    </div>
+                        <p className='text-center'><b>{getUser.postalCode}</b></p>
                 </div>
-                <ModalEdit />
-                <button className="btn button-6 m-2">Orders</button>
+                <div className="row">
+                    <div className="col-7">
+                        <ModalEdit />
+                    </div>
+                    <div className="col-3">
+                        <ModalOrders />
+                    </div>
+                </div>
             </div>
-            <div>
-                {
-                    myOrders.map((e) => {
-                        return (
-                            <>
-                                <p>{e.firstName}</p>
-                                <p>{e.lastName}</p>
-                                {
-                                    (e.products).map((x) => {
-                                        return (
-                                            <>
-                                                <p>{x.name}</p>
-                                            </>
-                                        )
-                                    })
-                                }
-                            </>
-                        )
-                    })
-                }
-            </div>
+            
         </>
     )
 }

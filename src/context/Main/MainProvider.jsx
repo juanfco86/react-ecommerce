@@ -2,6 +2,7 @@ import { useEffect, useReducer } from 'react';
 import { useState } from 'react'
 import { MainContext } from './MainContext'
 import { WishReducer } from '../../helper/Reducer/WishReducer'
+import toast from 'react-hot-toast';
 
 const MainProvider = ({ children }) => {
     let saveCartBuy = [];
@@ -64,12 +65,14 @@ const MainProvider = ({ children }) => {
         const findProduct = elem.find((card) => card.id === product.id);
         if (findProduct) {
             // SI EXISTE EL PRODUCTO, COPIA EL CONTENIDO Y LE SUMA UNO
+            toast.success('Add product to cart succefully 💖')
             setBuy(
                 elem.map(e => e.id === product.id ? {
                     ...findProduct,
                     amount: findProduct.amount + 1
                 } : e))
             } else {
+                toast.success('Add product to cart succefully 💖')
                 // SI NO COPIA EL CONTENIDO Y INTRODUCE EL PRIMERO
                 setBuy([...elem, { ...product, amount: 1 }]);
         }

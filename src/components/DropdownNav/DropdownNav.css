@@ -1,0 +1,16 @@
+.dropdown {
+    background-color: #e6394629;
+}
+
+.dropdownChildren {
+    margin-top: 2px;
+}
+
+.dropdownChildren:hover {
+    background-color: #dc143c;
+}
+
+.paraNav {
+    font-size: 110%;
+    font-weight: 600;
+}

@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useMemo } from 'react';
 import { useCallback } from 'react';
 import { useState } from 'react'
 import { AuthContext } from './AuthContext'
 
 const AuthProvider = ({ children }) => {
-    // IMPORTANDO ENCRIPTADOR DE CONTRASEÑAS
-    const bcrypt = require("bcryptjs");
 
-    const [dataUser, setDataUser] = useState([]);
+    const [getUser, setGetUser] = useState([]);
     const [usersData, setUsersData] = useState([]);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,40 +16,15 @@ const AuthProvider = ({ children }) => {
     const [errorRegister, setErrorRegister] = useState('');
     const urlUsers = "http://localhost:3000/users";
 
-    // Pasar a CONTEXT los fetch --> setUsetData y setProduct
     const fetchDataUsers = useCallback(async () => {
         try {
             const response = await fetch(urlUsers);
             const data = await response.json();
-            //fetchDataUsers();
             setUsersData(data);
         } catch {
             console.log("Error");
         }
     }, [])
-    
-    const login = useCallback(function(email, password) {
-        usersData.find((elem) => {
-            if (elem.email === email) {
-                bcrypt.compare(password, elem.password, (err, coincide) => {
-                    if (err) {
-                        return console.log('Error:', err);
-                    } else if (coincide) {
-                        // SI LA CONTRASEÑA ES IGUAL HACE ESTO
-                        sessionStorage.setItem('Logged', true);
-                        localStorage.setItem('Logged', JSON.stringify(elem));
-                        fetchDataUsers();
-                        return setLoginStatus(true);
-                    } else {
-                        return setErrorMessage('Password incorrect')
-                    }
-                })
-            } else {
-                return setErrorMessage('Email incorrect')
-            }
-            return '';
-        });
-    }, [bcrypt, usersData, fetchDataUsers])
     
     const logout = useCallback(function() {
         sessionStorage.removeItem('Logged');
@@ -64,13 +37,14 @@ const AuthProvider = ({ children }) => {
     }, [fetchDataUsers])
 
     useEffect(() => {
-        setDataUser(JSON.parse(localStorage.getItem('Logged')));
-    }, [fetchDataUsers, usersData])
+        setGetUser(JSON.parse(localStorage.getItem('Logged')));
+    }, [fetchDataUsers, usersData, logout])
 
     const value = useMemo(() => ({
-            login,
+            //login,
             logout,
             loginStatus,
+            setLoginStatus,
             errorMessage,
             setErrorMessage,
             errorRegister,
@@ -82,11 +56,11 @@ const AuthProvider = ({ children }) => {
             setPassword,
             helperRegister,
             setHelperRegister,
-            dataUser,
-            setDataUser,
-            fetchDataUsers
+            fetchDataUsers,
+            getUser,
+            setGetUser
         }),
-        [login, logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData, dataUser, fetchDataUsers]
+        [logout, loginStatus, email, password, errorMessage, errorRegister, helperRegister, usersData, fetchDataUsers, getUser]
     );
 
 

@@ -37,7 +37,7 @@ const Reels = () => {
                 </div>
 
                 <div className="photo-container">
-                    <div className="row photo-row">
+                    <div className="photo-row">
                         {
                             products && products.filter((card) => {
                                 if (!query) return true;

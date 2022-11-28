@@ -48,7 +48,7 @@ const Home = () => {
     }
         
     return (
-        <div className='container-body'>
+        <div className='container-body row'>
             <ShoppingCart buy={ buy } setBuy={ setBuy } result={ result } setResult={ setResult } saveValue={ saveValue } decreaseValue={ decreaseValue } resetValue={ resetValue } />
             <PhotoContainer addWish= { addWish } deleteWish= { deleteWish } saveValue= { saveValue } products = { products } helper = { helper } />
         </div>

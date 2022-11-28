@@ -14,7 +14,7 @@ const Products = () => {
 
     return (
         <>
-            <div className='row d-flex justify-content-center align-items-center'>
+            <div className='row d-flex justify-content-center align-items-center media-container'>
                 {
                     <div className='col-8 div-double'>
                         <table>
@@ -33,7 +33,7 @@ const Products = () => {
                                     return (
                                         <>
                                             <tr key={uuidv4()}>
-                                                <td className='td-obj td-photo'><img src={photos[`photo${card.img}`]} alt={card.name} className='photo-price-cart' /></td>
+                                                <td className='td-obj td-photo td-styles'><img src={photos[`photo${card.img}`]} alt={card.name} className='photo-price-cart photo-display' /></td>
                                                 <td className='td-obj td-styles'><b>{card.name}</b></td>
                                                 <td className='td-obj td-styles'><b>{card.price} €</b></td>
                                                 <td className='td-obj td-styles'><b>{card.amount}</b></td>

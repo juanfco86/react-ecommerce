@@ -3,14 +3,31 @@ import { useAuthContext } from '../context/Auth/AuthContext'
 
 const Login = () => {
     // RECOGER DATOS DE CONTEXT (recoger datos de la nube)
-    const { login, errorMessage, email, setEmail, password, setPassword } = useAuthContext();
-
+    const { errorMessage, email, setEmail, password, setPassword, usersData, fetchDataUsers, setLoginStatus } = useAuthContext();
+    const bcrypt = require("bcryptjs");
     // Si el mensaje de error esta vacio, devuelve validate con los errores que tenga el usuario
     const errorAux = () => {
         if(errorMessage === '') {
             return validate(email, password);
         }
     } 
+
+    const login = (email, password) => {
+        const findUser = usersData.find((e) => e.email === email);
+        let compare = bcrypt.compareSync(password, findUser.password);
+
+        if (compare) {
+            sessionStorage.setItem('Logged', true);
+            localStorage.setItem('Logged', JSON.stringify(findUser));
+            fetchDataUsers();
+            setLoginStatus(true);
+        } else {
+            // TOAST CON VALIDACION INCORRECTA
+            console.log('error');
+        }
+    }
+
+
     
     return (
         <>

@@ -1,16 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/Auth/AuthContext';
-import { useEffect } from 'react';
 
 const Register = () => {
     const bcrypt = require("bcryptjs");
     const navigate = useNavigate();  
-    const { setHelperRegister, usersData, errorRegister, setErrorRegister, fetchDataUsers } = useAuthContext();
-
-    useEffect(() => {
-        fetchDataUsers();
-    }, [usersData])
+    const { setHelperRegister, usersData, errorRegister, setErrorRegister, fetchDataUsers, setLoginStatus } = useAuthContext();
     
     const register = (e) => {
         e.preventDefault();
@@ -42,10 +37,12 @@ const Register = () => {
                         })
                         .then(res => res.json())
                         .then(() => fetchDataUsers())
-                        .then(navigate('/login'))
-                        .catch(error => console.log(error))
+                        .then(() => sessionStorage.setItem('Logged', true))
+                        .then(() => localStorage.setItem('Logged', JSON.stringify(newUser)))
+                        .then(() => setLoginStatus(true))
+                        .catch(error => console.log(error));
                         
-                        setHelperRegister(true);
+                        setHelperRegister(true)
                         setErrorRegister(null);
                     } else {
                         setHelperRegister(false)

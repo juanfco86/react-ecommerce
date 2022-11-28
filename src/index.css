@@ -20,6 +20,8 @@ code {
 
 .container-body {
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  width: 93%;
+  grid-template-columns: 2fr 9fr;
+  width: 100%;
 }
+
+

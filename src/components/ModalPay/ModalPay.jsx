@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { MainContext } from '../../context/Main/MainContext';
+import './ModalPay.css'
 
 const ModalPay = () => {
 
@@ -49,11 +50,11 @@ const ModalPay = () => {
     
     return (
         <>
-            <Button variant="primary" className='btn button-6' onClick={handleShow}>
+            <Button variant="primary" className='btn button-6 btn-size' onClick={handleShow}>
                 Pay <i className="fa-solid fa-credit-card"></i>
             </Button>
             <Modal show={show} onHide={handleClose}>
-                <Modal.Body>
+                <Modal.Body className='modal-color'>
                 {
                     <form onSubmit={(e) => {
                         shipping(e)

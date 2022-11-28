@@ -2,12 +2,10 @@ import { useContext, useEffect } from "react";
 import { MainContext } from "../../context/Main/MainContext";
 import PhotoCard from "../PhotoCard/PhotoCard"
 import { v4 as uuidv4 } from 'uuid';
-import { useNavigate } from "react-router-dom";
 
 const WishList = () => {
 
     const { wishes, saveValue, addWish, deleteWish, buy, setBuy, decreaseValue, resetValue } = useContext(MainContext);
-    const navigate = useNavigate();
 
     useEffect(() => {
         localStorage.setItem('Wish', JSON.stringify(wishes));
@@ -17,10 +15,6 @@ const WishList = () => {
     useEffect(() => {
         localStorage.setItem("Result", JSON.stringify(buy));
     }, [buy])
-
-    useEffect(() => {
-        navigate('');
-    }, [wishes])
 
     return (
         <>

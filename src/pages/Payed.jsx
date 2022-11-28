@@ -6,10 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
 import * as photos from '../assets/img'
 
 const Payed = () => {
-    const { dataUser } = useAuthContext();
+    const { getUser } = useAuthContext();
     const { buy, setBuy } = useContext(MainContext);
 
-    // PROVISIONAL
     const restartCart = () => {
         setBuy([]);
     }
@@ -17,7 +16,7 @@ const Payed = () => {
     return (
         <>
         <div className="d-flex flex-column align-items-center justify-content-center">
-            <h3 className="alert alert-danger">{dataUser.firstName}, thanks for your purchase!!</h3>
+            <h3 className="alert alert-danger">{getUser.firstName}, thanks for your purchase!!</h3>
             {
                 buy?.map((card) => {
                     return (

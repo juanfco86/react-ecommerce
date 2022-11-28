@@ -4,7 +4,6 @@ import Home from '../pages/Home'
 import Products from '../pages/Products'
 import Login from '../pages/Login'
 import WishList from '../pages/MainWish'
-import Category from '../pages/Category'
 import Register from '../pages/Register'
 import User from '../pages/User'
 import Reels from '../pages/Reels'
@@ -28,7 +27,6 @@ const Router = () => {
                 <Route path='/payed' element={ <Payed /> } />
             </Route>
             <Route index element={ <Home /> } />
-            <Route path="/category" element={ <Category /> } />
             <Route path="/products" element={ <Products /> } />
             <Route path='/rods' element={ <Rods /> } />
             <Route path='/reels' element={ <Reels /> } />

@@ -10,8 +10,8 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
     return (
         <>
             <aside className="shopping_cart">
-                <h4 className="title_box">Shopping Cart</h4>
-                <hr />
+                <h4 className="title_box text-display">Shopping Cart</h4>
+                <hr className='photo-display' />
                 {
                     (buy && buy.length > 0 && buy.map((card) => {
                         return (
@@ -32,7 +32,7 @@ const ShoppingCart = ( { buy, setBuy, saveValue, resetValue, decreaseValue } ) =
                         )
                     })) || (<h6 className='empty-cart d-flex align-items-center justify-content-center'>Empty Cart</h6>)
                 }  
-                <hr />
+                <hr className='photo-display' />
                 <div className='mb-3'>
                     <TotalPrice 
                         buy={buy}
