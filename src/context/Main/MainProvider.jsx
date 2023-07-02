@@ -78,6 +78,7 @@ const MainProvider = ({ children }) => {
         }
     }
 
+
     return (
         <MainContext.Provider value={{ buy, setBuy, products, setProducts, wishes, dispatch, addWish, deleteWish, saveValue }}>
             { children }

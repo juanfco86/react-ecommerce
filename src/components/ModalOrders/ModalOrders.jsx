@@ -10,7 +10,7 @@ const ModalOrders = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const url = "http://localhost:3000/orders";
+    const url = "http://localhost:4000/orders";
     const [orders, setOrders] = useState([]);
     const myOrders = orders.filter((e) => e.idUser === getUser.id);
 

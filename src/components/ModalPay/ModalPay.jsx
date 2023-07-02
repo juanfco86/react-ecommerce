@@ -34,7 +34,7 @@ const ModalPay = () => {
                 products: buy
             }
             
-            fetch(`http://localhost:3000/orders`, {
+            fetch(`http://localhost:4000/orders`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

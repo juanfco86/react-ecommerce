@@ -1,10 +1,11 @@
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import PhotoCard from "../components/PhotoCard/PhotoCard"
 import { v4 as uuidv4 } from 'uuid';
-import { useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect } from "react";
 import { MainContext } from "../context/Main/MainContext";
 
 const Rods = () => {
+    const navigate = useNavigate();
     const { wishes, products, addWish, deleteWish, saveValue, buy } = useContext(MainContext);
     const [filter, setFilter] = useSearchParams();
     const query = filter.get("query") ?? "";
@@ -14,6 +15,10 @@ const Rods = () => {
         setFilter({ query: value });
     }
     
+    const handleNavigate = useCallback(() => {
+        navigate('')
+    }, [navigate])
+    
     useEffect(() => {
         localStorage.setItem('Wish', JSON.stringify(wishes));
     }, [wishes])
@@ -21,6 +26,10 @@ const Rods = () => {
     useEffect(() => {
         localStorage.setItem("Result", JSON.stringify(buy));
     }, [buy])
+
+    useEffect(() => {
+        handleNavigate()
+    }, [handleNavigate, wishes]);
 
     return (
         <>

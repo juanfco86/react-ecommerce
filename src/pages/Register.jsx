@@ -26,7 +26,7 @@ const Register = () => {
                     }
                     
                     if (!usersData.find((elem) => elem.email === newUser.email)) {
-                        fetch('http://localhost:3000/users', {
+                        fetch('http://localhost:4000/users', {
                             method: "POST",
                             headers: {
                                 'Content-Type': 'application/json'

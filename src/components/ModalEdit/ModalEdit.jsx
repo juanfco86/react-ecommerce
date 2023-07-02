@@ -22,7 +22,7 @@ const ModalEdit = () => {
                 postalCode: e.target.postalCode.value,
             }
             
-            fetch(`http://localhost:3000/users/${helperUser.id}`, {
+            fetch(`http://localhost:4000/users/${helperUser.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

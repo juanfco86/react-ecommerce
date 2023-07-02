@@ -203,6 +203,15 @@
       "lastName": "Perez",
       "address": "Calle Maestra",
       "postalCode": "29640"
+    },
+    {
+      "id": "c8e09dd4-afbf-4fc3-8032-2ba92ae2b836",
+      "email": "juan12341234@gmail.com",
+      "password": "$2a$10$hQiTNq3UXO2Ez11R8lnZk.nz23djUqBwXHiZ1.kuAm5AoaMfqkTLm",
+      "firstName": "1234",
+      "lastName": "1223",
+      "address": "Calle Juanito",
+      "postalCode": "12345"
     }
   ],
   "orders": [
@@ -418,6 +427,51 @@
           "amount": 1,
           "category": "Rod",
           "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        }
+      ]
+    },
+    {
+      "id": "ba52c6ca-9324-42e8-827b-c7257657755b",
+      "idUser": "c8e09dd4-afbf-4fc3-8032-2ba92ae2b836",
+      "firstName": "1234",
+      "lastName": "1223",
+      "address": "Calle Juanito",
+      "postalCode": "12345",
+      "cardNumber": "1010101010101010",
+      "cardOwner": "1010",
+      "expDateMonth": "12",
+      "expDateYear": "25",
+      "CVC": "111",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        },
+        {
+          "id": 2,
+          "name": "VERCELLI ENYGMA HELIO 4.20M 3TR",
+          "price": 199,
+          "stock": 5,
+          "img": "02",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Super precio en una caña de pesca surfcasting que no hace honor a su nombre. De clásica no tiene nada la Vercelli Enygma Clasica. El carbono y los componentes son de última generación. Caña surfcasting fabricada en Hi-Modulus Carbon monta anillas Fuji Low Rider y porta carretes Fuji DPS de rosca con almohadilla. Caña con puntero tubular Power Tip Section y potente acción 100-250 gramos concebida para escupir metros y metros y alcanzar largas distancias. Por poca pasta tienes una caña de primera marca, equipada a tope y con unos acabados esmerados."
+        },
+        {
+          "id": 4,
+          "name": "VERCELLI OXYGEN ZK - 7+1BB",
+          "price": 89,
+          "stock": 7,
+          "img": "04",
+          "amount": 1,
+          "category": "Reel",
+          "description": "Completo y a buen precio se ofrece el Vercelli Oxygen ZK. Ideal para pescadores que buscan un buen carrete a precio contenido para surfcasting. Fabricado en material ultra ligero, el Oxygen ZK tiene mecánica a base de 6 rodamientos a bolas, freno micro ajustable Fast Drag con 14 Kilos de potencia, cierre de pick-up automático, guía hilos sobredimensionado, manivela de aluminio y pomo engomado. Se entrega con bobina extra de grafito capacidad 345 metros de nylón 0.35 mm."
         }
       ]
     }

@@ -2,7 +2,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import PhotoCard from "../PhotoCard/PhotoCard"
 import './PhotoContainer.css'
 import { v4 as uuidv4 } from 'uuid';
-import { useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect } from "react";
 import { MainContext } from "../../context/Main/MainContext";
 
 const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
@@ -17,9 +17,13 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
     setFilter({ query: value });
   }
 
+  const handleNavigate = useCallback(() => {
+      navigate('')
+  }, [navigate])
+
   useEffect(() => {
-    navigate('');
-  }, [wishes])
+    handleNavigate()
+  }, [wishes, handleNavigate])
 
   
     return (
@@ -42,18 +46,18 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
                           .map((card) => {
                             return (
                               <PhotoCard 
-                              key={uuidv4()}
-                              id={card.id}
-                              name={card.name}
-                              price={card.price}
-                              img={card.img}
-                              stock={card.stock}
-                              category={card.category}
-                              description={card.description}
-                              amount={card.amount}
-                              saveValue={saveValue}
-                              addWish={addWish}
-                              deleteWish={deleteWish}
+                                key={uuidv4()}
+                                id={card.id}
+                                name={card.name}
+                                price={card.price}
+                                img={card.img}
+                                stock={card.stock}
+                                category={card.category}
+                                description={card.description}
+                                amount={card.amount}
+                                saveValue={saveValue}
+                                addWish={addWish}
+                                deleteWish={deleteWish}
                               />
                               )
                             })
