@@ -31,6 +31,9 @@
       "react-app/jest"
     ]
   },
+  "browser": {
+    "crypto": "crypto-browserify"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
