@@ -8,7 +8,7 @@ import DropdownNav from '../DropdownNav/DropdownNav'
 import { Button } from 'react-bootstrap'
 
 const TopNav = () => {
-    const { loginStatus, logout, getUser } = useAuthContext();
+    const { loginStatus, logout } = useAuthContext();
     let user = JSON.parse(localStorage.getItem(`Logged`));
 
     return (

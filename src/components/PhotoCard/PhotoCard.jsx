@@ -36,7 +36,7 @@ const PhotoCard = ({ id, name, price, stock, saveValue, img, category, descripti
   // SE REALIZA ESTO, SOLO UNA VEZ, AL ENTRAR POR PRIMERA VEZ A LA PAGINA POR EL ARRAY DE DEPENDENCIAS, QUE BUSCA SI EL OBJETO YA EXISTE EN EL LS
   useEffect(() => {
     heartStart();
-  })
+  }, [])
 
   const heart = (product) => {
       // USO DE USEREF PARA IDENTIFICAR LOS DATOS A LOS QUE QUEREMOS ACCEDER

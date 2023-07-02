@@ -11,7 +11,18 @@ const Cart = ( props ) => {
         <>
             <div className="cart_contain">
                 <div className="priceCart">
-                    <CountApp price={ price } img={ img } saveValue={ saveValue } resetValue={ resetValue } decreaseValue={ decreaseValue } id={ id } buy={ buy } setBuy={ setBuy } stock={ stock } amount={ amount } />
+                    <CountApp 
+                        price={ price }
+                        img={ img }
+                        saveValue={ saveValue }
+                        resetValue={ resetValue }
+                        decreaseValue={ decreaseValue }
+                        id={ id }
+                        buy={ buy }
+                        setBuy={ setBuy }
+                        stock={ stock }
+                        amount={ amount }
+                    />
                     <span className='secondLine'><b>{ name }</b></span>
                     <img src={ imgProduct } alt={ name } className='imgProduct' />
                     <hr />

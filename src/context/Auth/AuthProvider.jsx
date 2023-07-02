@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
     const [loginStatus, setLoginStatus] = useState(sessionStorage.getItem('Logged') ?? false);
     const [errorMessage, setErrorMessage] = useState('');
     const [errorRegister, setErrorRegister] = useState('');
-    const urlUsers = "http://localhost:3000/users";
+    const urlUsers = "http://localhost:4000/users";
 
     const fetchDataUsers = useCallback(async () => {
         try {

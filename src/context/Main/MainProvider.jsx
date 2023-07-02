@@ -20,7 +20,7 @@ const MainProvider = ({ children }) => {
     const [ wishes, dispatch ] = useReducer(WishReducer, [], init);
     const [products, setProducts] = useState([]);
     
-    const url = "http://localhost:3000/data";
+    const url = "http://localhost:4000/data";
 
     // COGE LA INFORMACION DEL SERVIDOR
     const fetchData = async () => {

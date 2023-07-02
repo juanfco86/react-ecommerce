@@ -20,6 +20,7 @@ const PhotoContainer = ({ saveValue, products, addWish, deleteWish }) => {
   useEffect(() => {
     navigate('');
   }, [wishes])
+
   
     return (
         <>  

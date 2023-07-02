@@ -16,6 +16,5 @@ export const WishReducer = (state, action) => {
         default:
             return state;
     }
-
 }
 

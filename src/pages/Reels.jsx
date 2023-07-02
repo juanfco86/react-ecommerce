@@ -47,25 +47,26 @@ const Reels = () => {
                                 }
                             })                            
                             .map((card) => {
-                                    if (card.category === "Reel") {
-                                        return (
-                                            <PhotoCard
-                                                key={uuidv4()}
-                                                id={card.id}
-                                                name={card.name}
-                                                price={card.price}
-                                                img={card.img}
-                                                stock={card.stock}
-                                                category={card.category}
-                                                description={card.description}
-                                                amount={card.amount}
-                                                saveValue={saveValue}
-                                                addWish={addWish}
-                                                deleteWish={deleteWish}
-                                            />
-                                        )
-                                    }
-                                })
+                                if (card.category === "Reel") {
+                                    return (
+                                        <PhotoCard
+                                            key={uuidv4()}
+                                            id={card.id}
+                                            name={card.name}
+                                            price={card.price}
+                                            img={card.img}
+                                            stock={card.stock}
+                                            category={card.category}
+                                            description={card.description}
+                                            amount={card.amount}
+                                            saveValue={saveValue}
+                                            addWish={addWish}
+                                            deleteWish={deleteWish}
+                                        />
+                                    )
+                                }
+                                return '';
+                            })
                         }
                     </div>
                 </div>

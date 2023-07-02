@@ -167,6 +167,42 @@
       "lastName": "Solano Pérez",
       "address": "Calle Maestra Ángeles Azpiazu",
       "postalCode": "29640"
+    },
+    {
+      "id": "6fe1c368-b843-4e50-83c5-6c52cedce9a7",
+      "email": "juan123@gmail.com",
+      "password": "$2a$10$x0tW1iODCaZeznWG7MG7cu2SGmmgnxAMKb6zUoxGFSBLZSKdu2o7.",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "calle Juan Francisco",
+      "postalCode": "11111"
+    },
+    {
+      "id": "e26d64e3-07c9-4b7b-8537-edeadbe78022",
+      "email": "juan1234@gmail.com",
+      "password": "$2a$10$Fst2PtSnb3JlaAoAR.DNReoOEGyfbe3datQ6hA8SoyoW.MJ1Tnf9W",
+      "firstName": "Juan Francisco",
+      "lastName": "Sola",
+      "address": "Calle Juan Francisco",
+      "postalCode": "11111"
+    },
+    {
+      "id": "317a6796-e6a1-466f-af66-94ffefd59bfe",
+      "email": "juanito12@gmail.com",
+      "password": "$2a$10$TTVfh6eBAXSYDZXiUzXYWePSE.yEmmQye3ZNvnacqzK609xN.r/0e",
+      "firstName": "Juan Francisco",
+      "lastName": "Sola",
+      "address": "Calle Juan Francisco",
+      "postalCode": "11111"
+    },
+    {
+      "id": "194ab7fb-f9d3-4b59-8f5f-f04969fd482a",
+      "email": "ana@gmail.com",
+      "password": "$2a$10$CuZT0k6uHQULZ1n65.SHL.6DBc06PKc9dQOu/ibHbm/5ZfsEtSZZG",
+      "firstName": "Ana Isabel",
+      "lastName": "Perez",
+      "address": "Calle Maestra",
+      "postalCode": "29640"
     }
   ],
   "orders": [
@@ -272,6 +308,116 @@
           "amount": 1,
           "category": "Reel",
           "description": "El Soare BB C2000PGS es un carrete del catálogo Shimano JDM (Japonés). Es un pequeño pero ligero carrete muy llamativo a la vista. El carrete tiene muchas características como su resistente engranaje (HAGANE) y su protección contra la instrucción de agua en el cuerpo (Coreprotect). Lo que es único en este carrete, es el muy bajo ratio (4.3:1) y muy lenta recogida (57 cm por vuelta).Este carrete es muy apropiado para técnicas de pesca donde se utilizan cañas ligeras o ultra ligeras. Debido a su bajo ratio ratio, tiene una poderosa y lenta recogida. Esta lenta recogida es muy beneficiosa para ciertas técnicas de pesca donde esta lentitud es clave para atrapar la mayoría de las presas. Por ejemplo: Pesca en zonas de trucha."
+        }
+      ]
+    },
+    {
+      "id": "a6a9a5c3-4d30-43a0-af2c-7c96dec111e8",
+      "idUser": "6fe1c368-b843-4e50-83c5-6c52cedce9a7",
+      "firstName": "Juan Francisco",
+      "lastName": "Solano",
+      "address": "calle Juan Francisco",
+      "postalCode": "11111",
+      "cardNumber": "1234 1234 1234 1234",
+      "cardOwner": "Juan",
+      "expDateMonth": "11",
+      "expDateYear": "23",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 3,
+          "name": "SHIMANO YASEI BB PIKE SPINNING",
+          "price": 30,
+          "stock": 1,
+          "img": "03",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Para los pescadores fanáticos del lucio, presentamos una nueva gama de cañas de lucio. La Yasei Pike 210H es una caña de spinning que combina con todo tipo de señuelos para aguas y canales pequeños a medianos, con crankbaits, spinnerbaits, softbait streamers, swimbaits o pequeños jerkbaits de hasta 60g, todo es posible con esta todoterreno. Con una longitud de 210cm, tendrás suficiente longitud para lanzar lo suficiente pero aún será flexible cuando quieras pescar debajo de los puentes o cerca de las estructuras. La acción de la caña rápida en combinación con el blank receptivo te asegurará el clavado adecuado que se necesita para pescar lucios. La Yasei Pike 250XH Spinning es una caña más larga que puede manejar señuelos más pesados de hasta 100 g. ¿Es una gran caña de spinning integral que le da un poco más de longitud, lo que resulta en lanzados más largos, que puede ser muy útil cuando se pesca en grandes lagos o en un río. Además, la longitud adicional puede ser muy útil cuando quieres pescar en agua con mucha cobertura, para poder pescar sobre ella."
+        }
+      ]
+    },
+    {
+      "id": "a7a5057b-9d0a-44c4-9de8-91edd3a841ac",
+      "idUser": "e26d64e3-07c9-4b7b-8537-edeadbe78022",
+      "firstName": "Juan Francisco",
+      "lastName": "Sola",
+      "address": "Calle Juan Francisco",
+      "postalCode": "11111",
+      "cardNumber": "1234 1234 1234 1234",
+      "cardOwner": "Juan",
+      "expDateMonth": "11",
+      "expDateYear": "23",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 4,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        },
+        {
+          "id": 3,
+          "name": "SHIMANO YASEI BB PIKE SPINNING",
+          "price": 30,
+          "stock": 1,
+          "img": "03",
+          "amount": 1,
+          "category": "Rod",
+          "description": "Para los pescadores fanáticos del lucio, presentamos una nueva gama de cañas de lucio. La Yasei Pike 210H es una caña de spinning que combina con todo tipo de señuelos para aguas y canales pequeños a medianos, con crankbaits, spinnerbaits, softbait streamers, swimbaits o pequeños jerkbaits de hasta 60g, todo es posible con esta todoterreno. Con una longitud de 210cm, tendrás suficiente longitud para lanzar lo suficiente pero aún será flexible cuando quieras pescar debajo de los puentes o cerca de las estructuras. La acción de la caña rápida en combinación con el blank receptivo te asegurará el clavado adecuado que se necesita para pescar lucios. La Yasei Pike 250XH Spinning es una caña más larga que puede manejar señuelos más pesados de hasta 100 g. ¿Es una gran caña de spinning integral que le da un poco más de longitud, lo que resulta en lanzados más largos, que puede ser muy útil cuando se pesca en grandes lagos o en un río. Además, la longitud adicional puede ser muy útil cuando quieres pescar en agua con mucha cobertura, para poder pescar sobre ella."
+        }
+      ]
+    },
+    {
+      "id": "1be92e33-c1c2-40b8-8c9d-41977c25b9f4",
+      "idUser": "317a6796-e6a1-466f-af66-94ffefd59bfe",
+      "firstName": "Juan Francisco",
+      "lastName": "Sola",
+      "address": "Calle Juan Francisco",
+      "postalCode": "11111",
+      "cardNumber": "1234 1234 1234 1234",
+      "cardOwner": "Juan",
+      "expDateMonth": "11",
+      "expDateYear": "23",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 3,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
+        }
+      ]
+    },
+    {
+      "id": "195466d8-1d72-4170-934c-8c0b5f62de3e",
+      "idUser": "194ab7fb-f9d3-4b59-8f5f-f04969fd482a",
+      "firstName": "Ana Isabel",
+      "lastName": "Perez",
+      "address": "Calle Maestra",
+      "postalCode": "29640",
+      "cardNumber": "1234123412341234",
+      "cardOwner": "Ana",
+      "expDateMonth": "01",
+      "expDateYear": "22",
+      "CVC": "123",
+      "products": [
+        {
+          "id": 1,
+          "name": "SHIMANO SPEEDMASTER SURF H HYBRID 4.25M 200 LOW RIDER",
+          "price": 210,
+          "stock": 10,
+          "img": "01",
+          "amount": 1,
+          "category": "Rod",
+          "description": "La Speedmaster Surf es una caña de surf de largo alcance, acción rápida y precio medio que combina un blank de carbono de alta calidad con accesorios de calidad y un potente rendimiento de lanzamiento. La Speedmaster Surf se encuentra en el medio de la gama de cañas de surf Shimano y ofrece una variedad de opciones de modelos que se adaptan exactamente a sus preferencias. Todas las cañas tienen una acción de lanzamiento potente y de largo alcance, y ofrecen una combinación fantástica de alto rendimiento, elección y precio. Diseñada con una acción de punta extra rápida, esta gama de cañas de gran apariencia le permite realmente pisar la potencia cuando necesita una distancia adicional, pero aún conserva la sensibilidad para mostrar las picadas de los peces más pequeños cuando se utiliza un aparejo de línea ligero. La potencia del lanzamiento de la Speedmaster se genera mediante el uso de High Modulus Full Carbon, combinado con la construcción Diaflash en la parte inferior del blank. La sensibilidad proviene de las puntas híbridas que se instalan en todos los modelos, con la excepción del 425T, que tiene una parte superior hueca más fuerte. Las puntas híbridas cuentan con una sección sólida empalmada a la perfección, que magnifica las picaduras sensibles de peces más pequeños. No puede dejar de quedar impresionado por el impresionante blank azul, que está equipado con guías tipo K de acero inoxidable Fuji Fazlite o guías Fuji Lowrider, según el modelo que elija. Estos son resistentes a la corrosión, ligeros y reducen la fricción."
         }
       ]
     }

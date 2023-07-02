@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../context/Auth/AuthContext'
 
@@ -23,7 +24,6 @@ const Login = () => {
             fetchDataUsers();
             setLoginStatus(true);
         } else {
-            // TOAST CON VALIDACION INCORRECTA
             console.log('error');
         }
     }
