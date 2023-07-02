@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.3",
-    "crypto-browserify": "^3.12.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
@@ -31,8 +30,10 @@
       "react-app/jest"
     ]
   },
-  "browser": {
-    "crypto": "crypto-browserify"
+  "resolve": {
+    "fallback": {
+      "crypto": false
+    }
   },
   "browserslist": {
     "production": [
